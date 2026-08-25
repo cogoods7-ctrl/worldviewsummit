@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worldview Summit 2027 — Mars Hill Academy</title>
+<meta name="description" content="The 2027 Mars Hill Academy Worldview Summit — 'One Nation Under God: Allegiance, Assimilation, and the Meaning of America.' January 18–22, 2027 in Washington, D.C.">
+<meta property="og:title" content="Worldview Summit 2027 — Mars Hill Academy">
+<meta property="og:description" content="One Nation Under God: Allegiance, Assimilation, and the Meaning of America — January 18–22, 2027, Washington, D.C.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2e; --deep: #091422; --gold: #c8973a; --gold-light: #e8b85c;
+    --gold-pale: #f5e6c8; --cream: #faf6ef; --warm-white: #fff9f0;
+    --slate: #2e3f58; --muted: #8a9ab5; --border: rgba(200,151,58,0.25); --text: #1a2840;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(9,20,34,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border); padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between; height: 68px;
+  }
+  .nav-logo { font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; text-decoration: none; line-height: 1.4; cursor: pointer; flex-shrink: 0; }
+  .nav-logo span { display: block; color: rgba(255,255,255,0.45); font-size: 9px; letter-spacing: 0.22em; }
+  .nav-links { display: flex; gap: 18px; list-style: none; align-items: center; }
+  .nav-links a { font-family: 'Josefin Sans', sans-serif; font-size: 9.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; cursor: pointer; white-space: nowrap; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .nav-donate { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); background: var(--gold); padding: 9px 16px; text-decoration: none; cursor: pointer; transition: background 0.2s; border: none; white-space: nowrap; }
+  .nav-donate:hover { background: var(--gold-light); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.7); transition: all 0.3s; }
+  .mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--deep); border-bottom: 1px solid var(--border); padding: 20px 32px 28px; z-index: 999; flex-direction: column; gap: 0; max-height: calc(100vh - 68px); overflow-y: auto; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06); cursor: pointer; text-decoration: none; transition: color 0.2s; }
+  .mobile-menu a:hover, .mobile-menu a.active { color: var(--gold); }
+  .mobile-menu a.donate-mobile { color: var(--gold); margin-top: 10px; border: 1px solid var(--border); padding: 12px 16px; text-align: center; }
+  @media (max-width: 1050px) { .nav-links, .nav-donate { display: none; } .hamburger { display: flex; } }
+
+  .page { display: none; }
+  .page.active { display: block; }
+
+  .hero { min-height: 100vh; background: var(--deep); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding-top: 68px; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(200,151,58,0.09) 0%, transparent 70%), linear-gradient(160deg, #091422 0%, #0d1b2e 50%, #061018 100%); }
+  .hero-grid { position: absolute; inset: 0; opacity: 0.035; background-image: linear-gradient(rgba(200,151,58,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(200,151,58,0.8) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-ornament { position: absolute; width: 600px; height: 600px; border: 1px solid rgba(200,151,58,0.07); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: spin 80s linear infinite; }
+  .hero-ornament::before { content: ''; position: absolute; inset: 30px; border: 1px solid rgba(200,151,58,0.05); border-radius: 50%; }
+  @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 20px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-eyebrow { font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; opacity: 0; animation: fadeUp 1s 0.3s ease both; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(44px, 7vw, 96px); font-weight: 900; color: #fff; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 18px; opacity: 0; animation: fadeUp 1s 0.5s ease both; }
+  .hero-title em { font-style: italic; color: var(--gold); display: block; }
+  .hero-topic { font-family: 'Playfair Display', serif; font-size: clamp(16px, 2vw, 22px); font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 10px; letter-spacing: 0.01em; opacity: 0; animation: fadeUp 1s 0.65s ease both; }
+  .hero-subtitle { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 2.2vw, 22px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.55); margin-bottom: 20px; opacity: 0; animation: fadeUp 1s 0.7s ease both; }
+  .hero-date { font-family: 'Josefin Sans', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.2em; color: var(--gold-pale); margin-bottom: 52px; opacity: 0; animation: fadeUp 1s 0.85s ease both; }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 1s 1s ease both; }
+  .hero-scroll { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: 'Josefin Sans', sans-serif; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); animation: bounce 2s 2s ease infinite; }
+  .hero-scroll::after { content: ''; width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); }
+  @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+  .btn-primary { font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; background: var(--gold); color: var(--navy); padding: 16px 36px; border: none; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,151,58,0.3); }
+  .btn-ghost { font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; background: transparent; color: rgba(255,255,255,0.8); padding: 16px 36px; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  .stat-strip { background: var(--gold); padding: 20px 40px; display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+  .stat-item { text-align: center; font-family: 'Josefin Sans', sans-serif; }
+  .stat-num { font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1; }
+  .stat-label { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(9,20,34,0.65); margin-top: 4px; }
+
+  .section { padding: 100px 40px; }
+  .section-light { background: var(--warm-white); }
+  .section-dark { background: var(--navy); color: #fff; }
+  .section-cream { background: var(--cream); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 700; line-height: 1.1; margin-bottom: 24px; }
+  .section-dark .section-title { color: #fff; }
+  .section-body { font-size: 20px; font-weight: 300; line-height: 1.7; color: var(--slate); max-width: 720px; }
+  .section-dark .section-body { color: rgba(255,255,255,0.65); }
+  .divider { width: 60px; height: 2px; background: linear-gradient(to right, var(--gold), var(--gold-light)); margin: 24px 0 36px; }
+
+  .about-quote { font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.5vw, 30px); font-style: italic; font-weight: 400; color: var(--navy); line-height: 1.4; border-left: 3px solid var(--gold); padding-left: 28px; margin: 40px 0; }
+  .value-card { padding: 34px; background: var(--cream); border: 1px solid var(--border); position: relative; transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 20px; }
+  .value-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+  .value-card-num { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 900; color: var(--gold-pale); line-height: 1; position: absolute; top: 14px; right: 22px; }
+  .value-card h3 { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .value-card p { font-size: 16px; line-height: 1.65; color: var(--slate); font-weight: 300; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; margin-top: 60px; }
+  .highlight-box { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); padding: 44px; margin: 44px 0; }
+  .highlight-box h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .highlight-box p { font-size: 17px; line-height: 1.65; color: rgba(9,20,34,0.75); font-weight: 300; }
+
+  .question-card { background: var(--warm-white); border-left: 3px solid var(--gold); padding: 20px 24px; margin-bottom: 14px; }
+  .question-card p { font-family: 'Playfair Display', serif; font-size: 17px; font-style: italic; color: var(--navy); line-height: 1.5; }
+
+  .schedule-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 0; flex-wrap: wrap; }
+  .schedule-tab { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 18px; background: none; border: none; cursor: pointer; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .schedule-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .schedule-tab:hover:not(.active) { color: var(--slate); }
+  .day-panel { display: none; padding-top: 48px; }
+  .day-panel.active { display: block; }
+  .timeline { position: relative; padding-left: 40px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--gold), transparent); }
+  .timeline-item { position: relative; margin-bottom: 32px; }
+  .timeline-item::before { content: ''; position: absolute; left: -36px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(200,151,58,0.2); }
+  .timeline-item.tba::before { background: var(--muted); box-shadow: 0 0 0 3px rgba(138,154,181,0.2); }
+  .time-label { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .timeline-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .timeline-desc { font-size: 16px; line-height: 1.6; color: var(--slate); font-weight: 300; max-width: 640px; }
+  .timeline-tag { display: inline-block; margin-top: 10px; font-family: 'Josefin Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); background: var(--gold-pale); padding: 4px 12px; }
+  .timeline-tag.tba { background: #e4e4e4; color: var(--slate); }
+  .timeline-tag.pay { background: #fdeee0; color: #a35b1f; }
+
+  .speakers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 26px; margin-top: 60px; }
+  .speaker-card { background: var(--warm-white); border: 1px solid var(--border); padding: 34px; transition: transform 0.25s, box-shadow 0.25s; position: relative; overflow: hidden; }
+  .speaker-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--gold), var(--gold-light)); transform: scaleX(0); transition: transform 0.3s; }
+  .speaker-card:hover { transform: translateY(-5px); box-shadow: 0 14px 44px rgba(0,0,0,0.1); }
+  .speaker-card:hover::before { transform: scaleX(1); }
+  .speaker-avatar { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 16px; font-style: italic; }
+  .speaker-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .speaker-title { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .speaker-org { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 14px; text-transform: uppercase; }
+  .speaker-bio { font-size: 15px; line-height: 1.6; color: var(--slate); font-weight: 300; }
+
+  .locations-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; margin-top: 60px; }
+  .location-card { background: var(--navy); color: #fff; padding: 36px; position: relative; overflow: hidden; transition: transform 0.25s; }
+  .location-card:hover { transform: translateY(-4px); }
+  .location-card::after { content: ''; position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: rgba(200,151,58,0.07); border-radius: 50%; transform: translate(20px, 20px); }
+  .location-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+  .location-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .location-address { font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .location-desc { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.6); font-weight: 300; }
+
+  .faq-list { max-width: 780px; margin: 60px auto 0; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 600; color: var(--navy); padding: 24px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; user-select: none; }
+  .faq-q:hover { color: var(--gold); }
+  .faq-icon { width: 26px; height: 26px; flex-shrink: 0; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); transition: transform 0.3s; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; font-size: 17px; line-height: 1.7; color: var(--slate); font-weight: 300; }
+  .faq-item.open .faq-a { max-height: 500px; padding-bottom: 24px; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; margin-top: 60px; }
+  .contact-info-block { margin-bottom: 30px; }
+  .contact-info-label { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 7px; }
+  .contact-info-value { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--navy); }
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--slate); margin-bottom: 7px; }
+  .form-input, .form-select, .form-textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border); background: var(--warm-white); font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--navy); outline: none; transition: border-color 0.2s; }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-textarea { height: 110px; resize: vertical; }
+
+  .donate-hero { background: var(--deep); padding: 120px 40px 80px; text-align: center; position: relative; overflow: hidden; }
+  .donate-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; margin-top: 60px; }
+  .donate-tier { border: 1px solid var(--border); padding: 36px; background: var(--warm-white); text-align: center; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+  .donate-tier:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+  .donate-tier.featured { background: var(--navy); border-color: var(--gold); }
+  .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-family: 'Josefin Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--navy); padding: 4px 14px; white-space: nowrap; }
+  .tier-amount { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+  .donate-tier.featured .tier-amount { color: var(--gold); }
+  .tier-name { font-family: 'Josefin Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate); margin-bottom: 14px; }
+  .donate-tier.featured .tier-name { color: rgba(255,255,255,0.6); }
+  .tier-desc { font-size: 15px; line-height: 1.6; color: var(--slate); font-weight: 300; margin-bottom: 24px; }
+  .donate-tier.featured .tier-desc { color: rgba(255,255,255,0.55); }
+  .tier-btn { display: block; width: 100%; font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--navy); padding: 13px 20px; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none; text-align: center; }
+  .tier-btn:hover { background: var(--gold-light); }
+
+  .scripture-banner { background: var(--deep); padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
+  .scripture-banner::before { content: '"'; position: absolute; font-family: 'Playfair Display', serif; font-size: 400px; color: rgba(200,151,58,0.04); top: -60px; left: -20px; line-height: 1; pointer-events: none; }
+  .scripture-text { font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.8vw, 32px); font-style: italic; font-weight: 400; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto 20px; line-height: 1.5; position: relative; }
+  .scripture-ref { font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); }
+
+  /* ── GUIDE PAGE ── */
+  .quickfacts-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 18px; margin-top: 50px; }
+  .quickfact { background: var(--warm-white); border: 1px solid var(--border); padding: 22px 24px; }
+  .quickfact-label { font-family: 'Josefin Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .quickfact-value { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+
+  .guide-nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 50px 0 10px; }
+  .guide-nav a { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); background: var(--gold-pale); padding: 10px 18px; text-decoration: none; cursor: pointer; transition: background 0.2s; }
+  .guide-nav a:hover { background: var(--gold); color: #fff; }
+
+  .packing-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 24px; margin-top: 30px; }
+  .packing-card { background: var(--warm-white); border: 1px solid var(--border); padding: 30px; }
+  .packing-card h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .checklist { list-style: none; }
+  .checklist li { font-size: 15px; line-height: 1.8; color: var(--slate); font-weight: 300; padding-left: 24px; position: relative; }
+  .checklist li::before { content: '\2610'; position: absolute; left: 0; color: var(--gold); font-size: 15px; top: 1px; }
+
+  .not-bring-box { background: #fdeee0; border-left: 3px solid #c0682b; padding: 22px 26px; margin-top: 30px; }
+  .not-bring-box h4 { font-family: 'Playfair Display', serif; font-size: 17px; color: #9c4a1a; margin-bottom: 8px; }
+  .not-bring-box p { font-size: 15px; line-height: 1.6; color: #6b3a17; font-weight: 300; }
+
+  .money-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+  .money-table th { font-family: 'Josefin Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-align: left; padding: 10px 14px; border-bottom: 2px solid var(--border); }
+  .money-table td { font-size: 15px; font-weight: 300; color: var(--slate); padding: 12px 14px; border-bottom: 1px solid var(--border); }
+  .money-table td.paid { color: #2f7a3d; font-weight: 600; }
+  .money-table td.self { color: #a35b1f; font-weight: 600; }
+
+  .merch-card { background: var(--navy); color: #fff; padding: 36px; text-align: center; }
+  .merch-card h4 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; }
+  .merch-card p { font-size: 16px; color: rgba(255,255,255,0.6); font-weight: 300; line-height: 1.6; margin-bottom: 22px; }
+
+  .etiquette-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 20px; margin-top: 30px; }
+
+  /* ── STORE PAGE ── */
+  .store-filters { display: flex; gap: 10px; flex-wrap: wrap; margin: 46px 0 6px; }
+  .store-filter-btn { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 11px 22px; border: 1px solid var(--border); background: var(--warm-white); color: var(--slate); cursor: pointer; transition: all 0.2s; }
+  .store-filter-btn.active, .store-filter-btn:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+  .store-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 28px; margin-top: 34px; }
+  .product-card { background: var(--warm-white); border: 1px solid var(--border); overflow: hidden; position: relative; transition: transform 0.25s, box-shadow 0.25s; }
+  .product-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(0,0,0,0.1); }
+  .product-image { height: 170px; background: linear-gradient(135deg, var(--gold-pale) 0%, var(--cream) 100%); display: flex; align-items: center; justify-content: center; font-size: 52px; position: relative; overflow: hidden; }
+  .coming-soon-ribbon { position: absolute; top: 16px; right: -34px; background: var(--navy); color: #fff; font-family: 'Josefin Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 5px 40px; transform: rotate(35deg); box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .product-info { padding: 20px 22px 24px; }
+  .product-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .product-category { font-family: 'Josefin Sans', sans-serif; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .product-price { font-family: 'Josefin Sans', sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .product-btn { width: 100%; padding: 11px; font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: #e6e6e6; color: #969696; border: none; cursor: not-allowed; text-align: center; }
+
+  @media (max-width: 768px) {
+    .section { padding: 70px 22px; }
+    .about-grid, .contact-grid, .two-col { grid-template-columns: 1fr; gap: 36px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+    .stat-strip { gap: 22px; }
+    .hero-ornament { width: 280px; height: 280px; }
+  }
+  footer { background: var(--deep); color: rgba(255,255,255,0.5); padding: 60px 40px 40px; border-top: 1px solid var(--border); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 40px; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+  .footer-tagline { font-size: 15px; line-height: 1.6; font-style: italic; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
+  .footer-heading { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { font-size: 15px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-bottom { max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">Worldview Summit<span>Mars Hill Academy · 2027</span></div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a onclick="showPage('schedule')" id="nav-schedule">Schedule</a></li>
+    <li><a onclick="showPage('speakers')" id="nav-speakers">Speakers</a></li>
+    <li><a onclick="showPage('locations')" id="nav-locations">Locations</a></li>
+    <li><a onclick="showPage('guide')" id="nav-guide">Student Guide</a></li>
+    <li><a onclick="showPage('store')" id="nav-store">Store</a></li>
+    <li><a onclick="showPage('faq')" id="nav-faq">FAQ</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a onclick="showPage('donate')" id="nav-donate" style="color:var(--gold);">Donate</a></li>
+  </ul>
+  <button class="nav-donate" onclick="window.open('https://marshill.edu/support/ways-to-give.html','_blank')">Give Now</button>
+  <div class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="showPage('home');closeMobileMenu()">Home</a>
+  <a onclick="showPage('about');closeMobileMenu()">About</a>
+  <a onclick="showPage('schedule');closeMobileMenu()">Schedule</a>
+  <a onclick="showPage('speakers');closeMobileMenu()">Speakers</a>
+  <a onclick="showPage('locations');closeMobileMenu()">Locations</a>
+  <a onclick="showPage('guide');closeMobileMenu()">Student Guide</a>
+  <a onclick="showPage('store');closeMobileMenu()">Store</a>
+  <a onclick="showPage('faq');closeMobileMenu()">FAQ</a>
+  <a onclick="showPage('contact');closeMobileMenu()">Contact</a>
+  <a onclick="showPage('donate');closeMobileMenu()">Donate</a>
+  <a class="donate-mobile" onclick="window.open('https://marshill.edu/support/ways-to-give.html','_blank');closeMobileMenu()">Give Now at marshill.edu →</a>
+</div>
+
+<!-- ========== HOME ========== -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="hero-bg"></div><div class="hero-grid"></div><div class="hero-ornament"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Mars Hill Academy · Rhetoric School · Grades 9–12 · 14th Annual Summit</div>
+      <h1 class="hero-title">Worldview<em>Summit</em></h1>
+      <p class="hero-topic">"One Nation Under God: Allegiance, Assimilation, and the Meaning of America"</p>
+      <p class="hero-subtitle">Engaging culture with the mind of Christ</p>
+      <p class="hero-date">January 18–22, 2027 &nbsp;·&nbsp; 5-Day Trip &nbsp;·&nbsp; Washington, D.C.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('about')">Discover the Summit</button>
+        <button class="btn-ghost" onclick="showPage('schedule')">View Schedule</button>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <div class="stat-strip">
+    <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Day Trip</div></div>
+    <div class="stat-item"><div class="stat-num">9–12</div><div class="stat-label">Grade Levels</div></div>
+    <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">Speaker Sessions</div></div>
+    <div class="stat-item"><div class="stat-num">14th</div><div class="stat-label">Annual Summit</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Student-Led</div></div>
+  </div>
+
+  <section class="section section-light">
+    <div class="section-inner">
+      <div class="section-label">2027 Topic</div>
+      <h2 class="section-title">One Nation Under God:<br>Allegiance, Assimilation, and the Meaning of America</h2>
+      <div class="divider"></div>
+      <p class="section-body">As America marks the conclusion of its 250th birthday, we reflect on what it means to be American — our past, our present, and our future. Questions of citizenship and immigration are being fiercely contested in the public square. Closer to home, a new Mormon temple and a new mosque are both under construction in our region — a visible sign of the religious pluralism reshaping American communities. From suburban Ohio to sea to shining sea, "we the people" are debating whether America should be "one nation under God."</p>
+      <div class="two-col">
+        <div>
+          <p style="font-size:18px;line-height:1.7;color:var(--slate);font-weight:300;margin-bottom:20px;">Through presentations, reading, and discussion, Mars Hill Academy students will wrestle with questions of national identity, faith's role in public life, the proper limits of government, and the shape of a just immigration policy — equipping them to engage both personal decisions and public policy from a perspective that honors God and our duty to serve Him.</p>
+          <p style="font-size:18px;line-height:1.7;color:var(--slate);font-weight:300;"><strong style="font-weight:600;color:var(--navy);">Every dimension of the Summit is planned and executed by students themselves</strong> — under the mentorship of faculty advisor Mr. Andy Stapleton. This is not a field trip. It is a proving ground for young men and women formed to think clearly, speak persuasively, and engage the world with grace and conviction.</p>
+        </div>
+        <div>
+          <div class="about-quote">"America is the only nation in the world that is founded on a creed. That creed is set forth with dogmatic and even theological lucidity in the Declaration of Independence."<br><span style="font-size:0.52em;font-style:normal;font-family:'Josefin Sans',sans-serif;letter-spacing:0.18em;color:var(--gold);">— G.K. Chesterton, <em>What I Saw in America</em> (1922)</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="scripture-banner">
+    <p class="scripture-text">"Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect."</p>
+    <div class="scripture-ref">Romans 12:2</div>
+  </div>
+
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="section-label">Guiding Questions</div>
+      <h2 class="section-title">What the Summit Will Answer</h2>
+      <div class="divider"></div>
+      <div class="question-card"><p>What makes American identity and culture unique?</p></div>
+      <div class="question-card"><p>What should be the role of faith in unifying American society?</p></div>
+      <div class="question-card"><p>When is it appropriate for the government to limit people's freedom?</p></div>
+      <div class="question-card"><p>What should be America's immigration policy?</p></div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="section-inner">
+      <div class="section-label">The Three Pillars</div>
+      <h2 class="section-title">What we pursue at the Summit</h2>
+      <div class="divider"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:20px;">
+        <div class="value-card"><div class="value-card-num">I</div><h3>Learn Truth</h3><p>Students encounter speakers from Congress, public policy institutions, academia, and advocacy organizations who engage the question of American identity from a robustly Christian perspective.</p></div>
+        <div class="value-card"><div class="value-card-num">II</div><h3>Love Beauty</h3><p>The Summit's venues — the National Mall, the Museum of the Bible, the halls of Congress — are a living classroom deepening students' appreciation for the heritage of ordered liberty.</p></div>
+        <div class="value-card"><div class="value-card-num">III</div><h3>Live Goodness</h3><p>Students don't just listen — they lead, plan, and execute. They practice the virtues Mars Hill has cultivated in them since their earliest years: courage, prudence, justice, and temperance.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== ABOUT ========== -->
+<div id="page-about" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:60px;">
+    <div class="section-inner">
+      <div class="section-label">About the Summit</div>
+      <h2 class="section-title">A tradition of formation,<br>leadership, and courage</h2>
+      <div class="divider"></div>
+      <p class="section-body">Now in its 14th year, the Worldview Summit is the defining capstone of the Mars Hill Academy high school experience — an annual five-day trip every January that challenges students to think, speak, and live Christianly in a complex world. Since 2014, students have traveled to Washington, D.C. to hear from scholars, policymakers, journalists, and advocates on the most pressing cultural questions of the day.</p>
+    </div>
+  </section>
+  <section class="section section-light">
+    <div class="section-inner">
+      <div class="section-label">Mars Hill Academy</div>
+      <h2 class="section-title">The school behind the Summit</h2>
+      <div class="divider"></div>
+      <div class="about-grid">
+        <div>
+          <p style="font-size:18px;line-height:1.7;color:var(--slate);font-weight:300;margin-bottom:22px;">Mars Hill Academy is Cincinnati's only PK–12 independent classical and Christian school, set on a beautiful 13-acre campus in Mason, Ohio. MHA is accredited by the Association of Classical and Christian Schools (ACCS).</p>
+          <p style="font-size:18px;line-height:1.7;color:var(--slate);font-weight:300;margin-bottom:22px;">The school's mission is rooted in the classical trivium — Grammar, Logic, and Rhetoric — equipping students to love learning and to think clearly, write persuasively, and speak precisely. Every subject is taught as part of a greater whole defined by Christian truth.</p>
+          <p style="font-size:18px;line-height:1.7;color:var(--slate);font-weight:300;">MHA operates independently of government and denominational funding, preserving its freedom to pursue an education that is pure in mission, vision, and result. Its motto: <em>Learn Truth. Love Beauty. Live Goodness.</em></p>
+        </div>
+        <div>
+          <div class="value-card" style="margin-bottom:18px;"><h3>Classical Education</h3><p>The trivium model equips students with critical thinking, logical reasoning, persuasive writing, and powerful speaking — skills that last a lifetime, not just a test.</p></div>
+          <div class="value-card" style="margin-bottom:18px;"><h3>Christian Worldview</h3><p>All subjects — math, science, literature, history — are taught through the lens of Scripture. Bible is not a separate subject; it is the foundation of all learning.</p></div>
+          <div class="value-card"><h3>Independent &amp; Integrated</h3><p>Free from government or denominational control, MHA integrates all knowledge as a coherent whole defined by Christian truth.</p></div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h3>Student Leadership at the Core</h3>
+        <p>Under the mentorship of faculty advisor Mr. Andy Stapleton, the Student Leadership Team selects the annual theme, recruits speakers, coordinates logistics, leads worship, and facilitates every session. As Headmaster Mike McKenna wrote in his 2021 Summit reflection: "I'm so impressed with how much of this event the students not only plan, but actually execute! You can talk about leadership opportunities in many other schools, but I have never seen such hands-on opportunity to actually bring something of this magnitude to pass. Well done!"</p>
+      </div>
+      <div class="section-label" style="margin-top:56px;">Faculty Advisor</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:14px;">Mr. Andy Stapleton</h3>
+      <p style="font-size:18px;line-height:1.7;color:var(--slate);font-weight:300;max-width:700px;">Mr. Stapleton devotes his time at MHA to discipling Logic and Rhetoric School students toward learning truth, living goodness, and loving beauty. He teaches Rhetoric-level Bible, Humanities, and Greek, and coaches both Varsity Soccer and the Worldview Summit Student Leadership team. He holds a B.A. in History and Christian Thought from Grove City College and an M.Div. from Westminster Theological Seminary in Philadelphia.</p>
+    </div>
+  </section>
+  <div class="scripture-banner">
+    <p class="scripture-text">"It's great for the students to hear such clear biblical worldview spoken to them by people other than their parents and teachers."</p>
+    <div class="scripture-ref">— Headmaster Mike McKenna, from his 2021 Worldview Summit reflection</div>
+  </div>
+</div>
+
+<!-- ========== SCHEDULE ========== -->
+<div id="page-schedule" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">Full Itinerary</div>
+      <h2 class="section-title">January 18–22, 2027</h2>
+      <div class="divider"></div>
+      <p class="section-body">The agenda below is the current working itinerary and is subject to change. Sessions marked <strong style="color:#fff;">TBA</strong> are still being finalized by the Student Leadership Team. Items marked <strong style="color:#fff;">$</strong> are meals students pay for on their own.</p>
+    </div>
+  </section>
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="schedule-tabs">
+        <button class="schedule-tab active" onclick="showDay('day1',this)">Mon, Jan 18</button>
+        <button class="schedule-tab" onclick="showDay('day2',this)">Tue, Jan 19</button>
+        <button class="schedule-tab" onclick="showDay('day3',this)">Wed, Jan 20</button>
+        <button class="schedule-tab" onclick="showDay('day4',this)">Thu, Jan 21</button>
+        <button class="schedule-tab" onclick="showDay('day5',this)">Fri, Jan 22</button>
+      </div>
+
+      <!-- MONDAY -->
+      <div id="day1" class="day-panel active">
+        <div style="margin-bottom:32px;"><h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);">Monday, January 18 — Travel Day</h3><p style="font-size:12px;color:var(--muted);font-family:'Josefin Sans',sans-serif;letter-spacing:0.14em;text-transform:uppercase;margin-top:5px;">Departure &amp; Arrival in D.C.</p></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time-label">6:45 AM</div><div class="timeline-title">Report to MHA &amp; Load Bus</div></div>
+          <div class="timeline-item"><div class="time-label">7:00 AM</div><div class="timeline-title">Departure &amp; Lunch on the Road</div><span class="timeline-tag pay">$ Self-Pay Meal</span></div>
+          <div class="timeline-item"><div class="time-label">5:00 PM</div><div class="timeline-title">Arrival in D.C. &amp; Check into Capitol Hill Hotel</div></div>
+          <div class="timeline-item"><div class="time-label">6:00 PM</div><div class="timeline-title">DINNER</div></div>
+          <div class="timeline-item"><div class="time-label">7:30 PM</div><div class="timeline-title">Evening Activity: National Mall Monuments</div><div class="timeline-desc">Guided walk to the Washington, Lincoln, WWII, Vietnam, and Korean War Memorials — an evening introduction to the story America tells about itself in stone.</div></div>
+          <div class="timeline-item"><div class="time-label">10:30 PM</div><div class="timeline-title">Devotions / Rest</div></div>
+          <div class="timeline-item"><div class="time-label">12:00 AM</div><div class="timeline-title">In Your Own Room for the Night</div></div>
+        </div>
+      </div>
+
+      <!-- TUESDAY -->
+      <div id="day2" class="day-panel">
+        <div style="margin-bottom:32px;"><h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);">Tuesday, January 19 — Museum of the Bible</h3><p style="font-size:12px;color:var(--muted);font-family:'Josefin Sans',sans-serif;letter-spacing:0.14em;text-transform:uppercase;margin-top:5px;">Day One of the Summit</p></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time-label">7:00 AM</div><div class="timeline-title">Breakfast at Capitol Hill Hotel</div><div class="timeline-desc">Go at your convenience before 8:00 AM.</div></div>
+          <div class="timeline-item"><div class="time-label">8:15 AM</div><div class="timeline-title">Walk to Museum of the Bible</div></div>
+          <div class="timeline-item tba"><div class="time-label">9:00 AM</div><div class="timeline-title">Session 1</div><div class="timeline-desc">Likely focus: the American founding and the biblical roots of national identity.</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item tba"><div class="time-label">10:15 AM</div><div class="timeline-title">Session 2</div><div class="timeline-desc">Likely focus: what makes American identity and culture unique.</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item"><div class="time-label">11:30 AM</div><div class="timeline-title">LUNCH</div></div>
+          <div class="timeline-item tba"><div class="time-label">1:30 PM</div><div class="timeline-title">Session 3</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item tba"><div class="time-label">2:45 PM</div><div class="timeline-title">Session 4</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item"><div class="time-label">3:45 PM</div><div class="timeline-title">Afternoon Activity: Touring the Museum of the Bible</div></div>
+          <div class="timeline-item"><div class="time-label">5:00 PM</div><div class="timeline-title">Depart Museum of the Bible</div></div>
+          <div class="timeline-item"><div class="time-label">6:00 PM</div><div class="timeline-title">DINNER</div></div>
+          <div class="timeline-item tba"><div class="time-label">7:30 PM</div><div class="timeline-title">Evening Activity</div><span class="timeline-tag tba">TBA</span></div>
+          <div class="timeline-item"><div class="time-label">10:30 PM</div><div class="timeline-title">Devotions / Rest</div></div>
+          <div class="timeline-item"><div class="time-label">12:00 AM</div><div class="timeline-title">In Your Own Room for the Night</div></div>
+        </div>
+      </div>
+
+      <!-- WEDNESDAY -->
+      <div id="day3" class="day-panel">
+        <div style="margin-bottom:32px;"><h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);">Wednesday, January 20 — Capitol Hill Baptist Church</h3><p style="font-size:12px;color:var(--muted);font-family:'Josefin Sans',sans-serif;letter-spacing:0.14em;text-transform:uppercase;margin-top:5px;">Day Two of the Summit</p></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time-label">7:00 AM</div><div class="timeline-title">Breakfast at Capitol Hill Hotel</div><div class="timeline-desc">Go at your convenience before 8:00 AM.</div></div>
+          <div class="timeline-item"><div class="time-label">8:30 AM</div><div class="timeline-title">Walk to Capitol Hill Baptist Church</div></div>
+          <div class="timeline-item tba"><div class="time-label">9:00 AM</div><div class="timeline-title">Session 5</div><div class="timeline-desc">Likely focus: the role of faith in unifying American society.</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item tba"><div class="time-label">10:15 AM</div><div class="timeline-title">Session 6</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item tba"><div class="time-label">11:30 AM</div><div class="timeline-title">Session 7</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item"><div class="time-label">12:30 PM</div><div class="timeline-title">LUNCH: Union Station</div><span class="timeline-tag pay">$ Self-Pay Meal</span></div>
+          <div class="timeline-item tba"><div class="time-label">2:45 PM</div><div class="timeline-title">Afternoon Activity</div><span class="timeline-tag tba">TBA</span></div>
+          <div class="timeline-item"><div class="time-label">6:00 PM</div><div class="timeline-title">DINNER</div></div>
+          <div class="timeline-item tba"><div class="time-label">7:30 PM</div><div class="timeline-title">Evening Activity</div><span class="timeline-tag tba">TBA</span></div>
+          <div class="timeline-item"><div class="time-label">10:30 PM</div><div class="timeline-title">Devotions / Rest</div></div>
+          <div class="timeline-item"><div class="time-label">12:00 AM</div><div class="timeline-title">In Your Own Room for the Night</div></div>
+        </div>
+      </div>
+
+      <!-- THURSDAY -->
+      <div id="day4" class="day-panel">
+        <div style="margin-bottom:32px;"><h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);">Thursday, January 21 — Heritage Foundation</h3><p style="font-size:12px;color:var(--muted);font-family:'Josefin Sans',sans-serif;letter-spacing:0.14em;text-transform:uppercase;margin-top:5px;">Day Three of the Summit</p></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time-label">7:00 AM</div><div class="timeline-title">Breakfast at Capitol Hill Hotel</div><div class="timeline-desc">Go at your convenience before 8:30 AM.</div></div>
+          <div class="timeline-item"><div class="time-label">9:00 AM</div><div class="timeline-title">Walk to Heritage Foundation</div></div>
+          <div class="timeline-item tba"><div class="time-label">9:30 AM</div><div class="timeline-title">Session 8</div><div class="timeline-desc">Likely focus: when it is appropriate for government to limit people's freedom.</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item tba"><div class="time-label">10:30 AM</div><div class="timeline-title">Session 9</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item tba"><div class="time-label">11:30 AM</div><div class="timeline-title">Session 10</div><div class="timeline-desc">Likely focus: American immigration policy.</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item"><div class="time-label">12:30 PM</div><div class="timeline-title">LUNCH: Heritage Foundation</div></div>
+          <div class="timeline-item tba"><div class="time-label">2:00 PM</div><div class="timeline-title">Afternoon Activity</div><span class="timeline-tag tba">TBA</span></div>
+          <div class="timeline-item"><div class="time-label">6:00 PM</div><div class="timeline-title">DINNER: Capitol Hill Club</div><div class="timeline-desc">Formal dinner — business/formal attire required. See the Student Guide for dress code details.</div></div>
+          <div class="timeline-item tba"><div class="time-label">7:30 PM</div><div class="timeline-title">Session 11</div><div class="timeline-desc">Closing keynote address of the Summit.</div><span class="timeline-tag tba">Speaker TBA</span></div>
+          <div class="timeline-item"><div class="time-label">9:00 PM</div><div class="timeline-title">Open Mic Sharing</div><div class="timeline-desc">Students reflect on the week and share what they've learned.</div></div>
+          <div class="timeline-item"><div class="time-label">10:30 PM</div><div class="timeline-title">Devotions / Rest</div></div>
+          <div class="timeline-item"><div class="time-label">12:00 AM</div><div class="timeline-title">In Your Own Room for the Night</div></div>
+        </div>
+      </div>
+
+      <!-- FRIDAY -->
+      <div id="day5" class="day-panel">
+        <div style="margin-bottom:32px;"><h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);">Friday, January 22 — Return Day</h3><p style="font-size:12px;color:var(--muted);font-family:'Josefin Sans',sans-serif;letter-spacing:0.14em;text-transform:uppercase;margin-top:5px;">March for Life &amp; Departure</p></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time-label">7:00 AM</div><div class="timeline-title">Breakfast at Capitol Hill Hotel</div><div class="timeline-desc">Go at your convenience before 9:00 AM.</div></div>
+          <div class="timeline-item"><div class="time-label">9:00 AM</div><div class="timeline-title">Check Out &amp; Store Luggage</div></div>
+          <div class="timeline-item"><div class="time-label">10:00 AM</div><div class="timeline-title">March for Life Rally / Touring</div></div>
+          <div class="timeline-item"><div class="time-label">1:00 PM</div><div class="timeline-title">March for Life</div><div class="timeline-desc">Students participate publicly in the March for Life on the National Mall — connecting the week's formation to embodied civic action.</div></div>
+          <div class="timeline-item"><div class="time-label">2:30 PM</div><div class="timeline-title">Load Bus &amp; Lunch on the Road</div><span class="timeline-tag pay">$ Self-Pay Meal</span></div>
+          <div class="timeline-item"><div class="time-label">6:30 PM</div><div class="timeline-title">Dinner on the Road</div><span class="timeline-tag pay">$ Self-Pay Meal</span></div>
+          <div class="timeline-item"><div class="time-label">12:00 AM</div><div class="timeline-title">Arrive at MHA</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== SPEAKERS ========== -->
+<div id="page-speakers" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">2027 Speaker Roster</div>
+      <h2 class="section-title">Voices for<br>"One Nation Under God"</h2>
+      <div class="divider"></div>
+      <p class="section-body">The Student Leadership Team is currently recruiting speakers from Congress, public policy institutions, academia, and advocacy organizations to address this year's theme. The 2027 roster will be announced here as speakers are confirmed. Prospective speakers are welcome to reach out via the Contact page.</p>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="highlight-box">
+        <h3>Interested in Speaking at the 2027 Summit?</h3>
+        <p>We are actively recruiting speakers on national identity, faith and public life, government and liberty, and immigration policy for our January 18–22, 2027 Summit in Washington, D.C. If you or someone you know would be a strong fit, please reach out through the Contact page — we'd love to hear from you.</p>
+      </div>
+
+      <div class="section-label" style="margin-top:56px;">Summit History &amp; Track Record</div>
+      <h2 class="section-title" style="margin-bottom:10px;">Caliber of Past Speakers</h2>
+      <p style="font-size:17px;line-height:1.7;color:var(--slate);font-weight:300;max-width:750px;margin-bottom:10px;">Since the first Worldview Summit in 2014, <strong style="font-weight:600;color:var(--navy);">111 speakers</strong> have addressed MHA students — including a former U.S. Vice President, two sitting U.S. Senators, five U.S. Congressmen, and leading voices from the Heritage Foundation, Claremont Institute, Alliance Defending Freedom, and Answers in Genesis. A representative sample of the Summit's caliber is below, followed by the complete historical directory.</p>
+      <p style="font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Source: official MHA Worldview Summit speaker records, current as of July 18, 2026.</p>
+
+      <div class="speakers-grid">
+        <div class="speaker-card"><div class="speaker-avatar">MP</div><div class="speaker-name">Mike Pence</div><div class="speaker-title">2023</div><div class="speaker-org">Former Vice President of the United States</div><p class="speaker-bio">The 48th Vice President of the United States addressed the Summit — the highest-ranking speaker in the event's history.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">SD</div><div class="speaker-name">Steve Daines</div><div class="speaker-title">2015, 2016, 2018, 2019</div><div class="speaker-org">U.S. Senator (Montana)</div><p class="speaker-bio">A four-time Summit speaker, Senator Daines has addressed students on faith, policy, and public service from Capitol Hill.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">ML</div><div class="speaker-name">Mike Lee</div><div class="speaker-title">2016</div><div class="speaker-org">U.S. Senator (Utah)</div><p class="speaker-bio">Senator Lee brought a constitutional law perspective to the Summit's discussion of government and liberty.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">JJ</div><div class="speaker-name">Jim Jordan</div><div class="speaker-title">2014</div><div class="speaker-org">U.S. Congressman (Ohio)</div><p class="speaker-bio">One of five sitting or former U.S. Representatives who have addressed the Summit since its founding.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">MD</div><div class="speaker-name">Marjorie Dannenfelser</div><div class="speaker-title">2014–2020 (7 years)</div><div class="speaker-org">President, Susan B. Anthony Pro-Life America</div><p class="speaker-bio">The Summit's most consistent early speaker, addressing students seven years running from the Summit's founding.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">AM</div><div class="speaker-name">Arthur Milikh</div><div class="speaker-title">2015–2023 (8 appearances)</div><div class="speaker-org">Claremont Institute / Heritage Foundation</div><p class="speaker-bio">The Summit's most frequent speaker overall, returning eight times to challenge students on philosophy, tech, and American institutions.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">DB</div><div class="speaker-name">David Barton</div><div class="speaker-title">2016</div><div class="speaker-org">Founder, WallBuilders</div><p class="speaker-bio">A leading voice on America's founding-era history addressed the Summit on faith and the American founding.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">RA</div><div class="speaker-name">Ryan Anderson</div><div class="speaker-title">2020, 2024</div><div class="speaker-org">President, Ethics and Public Policy Center</div><p class="speaker-bio">A nationally published author and policy scholar, Anderson has addressed the Summit twice on culture and public policy.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">CT</div><div class="speaker-name">Carl Trueman</div><div class="speaker-title">2023</div><div class="speaker-org">Grove City College</div><p class="speaker-bio">Author of <em>The Rise and Triumph of the Modern Self</em>, Trueman brought his scholarship on identity and culture to the Summit.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">MF</div><div class="speaker-name">Michael Farris</div><div class="speaker-title">2016</div><div class="speaker-org">Founder, Patrick Henry College</div><p class="speaker-bio">A leading figure in Christian legal advocacy and education, Farris addressed the Summit on liberty and law.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">RB</div><div class="speaker-name">Rob Bilott</div><div class="speaker-title">2026</div><div class="speaker-org">Attorney, Taft Law Firm</div><p class="speaker-bio">The environmental attorney whose two-decade case against DuPont was portrayed in the film <em>Dark Waters</em>.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">KH</div><div class="speaker-name">Ken Ham</div><div class="speaker-title">2021</div><div class="speaker-org">President &amp; CEO, Answers in Genesis</div><p class="speaker-bio">One of the most recognized voices in Christian apologetics addressed the Summit on faith and the next generation.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">JS</div><div class="speaker-name">Joel Salatin</div><div class="speaker-title">2026</div><div class="speaker-org">Polyface Farm — Author &amp; Farmer</div><p class="speaker-bio">A widely known voice in regenerative agriculture and self-reliance, featured in <em>The Omnivore's Dilemma</em>.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">SK</div><div class="speaker-name">Sharon Kennedy</div><div class="speaker-title">2021</div><div class="speaker-org">Justice, Ohio Supreme Court</div><p class="speaker-bio">An elected Justice of the Ohio Supreme Court, Kennedy addressed the Summit on free speech and the law in the public square.</p></div>
+        <div class="speaker-card"><div class="speaker-avatar">EP</div><div class="speaker-name">Eric Patterson</div><div class="speaker-title">2023</div><div class="speaker-org">President, Victims of Communism Memorial Foundation</div><p class="speaker-bio">Patterson addressed the Summit on totalitarianism, liberty, and why national allegiance matters — a direct throughline to this year's theme.</p></div>
+      </div>
+
+      <div style="text-align:center;margin-top:44px;">
+        <button class="btn-primary" onclick="toggleDirectory()" id="directory-toggle-btn">View the Complete 111-Speaker Directory ↓</button>
+      </div>
+
+      <div id="full-directory" style="display:none;margin-top:44px;">
+        <div class="section-label">Complete Historical Directory</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;">All 111 Speakers, 2014–2026</h3>
+        <p style="font-size:15px;color:var(--muted);font-weight:300;margin-bottom:20px;">Listed alphabetically by last name, with organization and year(s) presented. Abbreviations: GCC = Grove City College, FRC = Family Research Council, SBA = Susan B. Anthony Pro-Life America, CHBC = Capitol Hill Baptist Church, EPPC = Ethics and Public Policy Center.</p>
+        <div style="max-height:600px;overflow-y:auto;border:1px solid var(--border);">
+          <table class="money-table" style="margin-top:0;">
+            <tr style="position:sticky;top:0;background:var(--cream);"><th>Name</th><th>Organization</th><th>Year(s)</th></tr>
+            <tr><td>Jake Abraham</td><td>Cru City</td><td>2019</td></tr>
+<tr><td>Isaac Adams</td><td>CHBC</td><td>2019</td></tr>
+<tr><td>Arina Grossu Agnew</td><td>FRC</td><td>2017</td></tr>
+<tr><td>James Albritton</td><td>MHA Headmaster</td><td>2016</td></tr>
+<tr><td>Gwen Charles Anderson</td><td>SBA</td><td>2024, 2026</td></tr>
+<tr><td>Hannah Anderson</td><td>America First Policy Institute</td><td>2026</td></tr>
+<tr><td>Ryan Anderson</td><td>Heritage/EPPC</td><td>2020, 2024</td></tr>
+<tr><td>Dana Ault</td><td>GCC</td><td>2026</td></tr>
+<tr><td>David Ayers</td><td>GCC</td><td>2015, 2018, 2020, 2024</td></tr>
+<tr><td>Aaron Baer</td><td>Center for Christian Virtue</td><td>2021, 2022</td></tr>
+<tr><td>Maria Baer</td><td>Colson Center</td><td>2021</td></tr>
+<tr><td>David Barton</td><td>WallBuilders</td><td>2016</td></tr>
+<tr><td>Brian Basham</td><td>World</td><td>2021</td></tr>
+<tr><td>Greg Baylor</td><td>Alliance Defending Freedom</td><td>2016</td></tr>
+<tr><td>Rob Bilott</td><td>Taft Law Firm</td><td>2026</td></tr>
+<tr><td>Thomas Binion</td><td>Heritage</td><td>2018</td></tr>
+<tr><td>Paul Billings</td><td>Campus Outreach</td><td>2024, 2025</td></tr>
+<tr><td>Kenneth Blackwell</td><td>FRC</td><td>2018, 2025</td></tr>
+<tr><td>Robert Bluey</td><td>Heritage</td><td>2021</td></tr>
+<tr><td>David Bobb</td><td>Hillsdale</td><td>2014</td></tr>
+<tr><td>Erin Brownback</td><td>Students for Life</td><td>2014</td></tr>
+<tr><td>Monica Burke</td><td>Heritage</td><td>2019</td></tr>
+<tr><td>James Carafano</td><td>Heritage</td><td>2023</td></tr>
+<tr><td>Steve Chabot</td><td>US Congressman</td><td>2019, 2022</td></tr>
+<tr><td>Marc Clauson</td><td>Cedarville</td><td>2020</td></tr>
+<tr><td>David Closson</td><td>FRC</td><td>2022</td></tr>
+<tr><td>Tessa Cox</td><td>SBA</td><td>2025</td></tr>
+<tr><td>David Cranfield</td><td>MHA parent</td><td>2024</td></tr>
+<tr><td>Steve Daines</td><td>US Senator</td><td>2015, 2016, 2018, 2019</td></tr>
+<tr><td>Marjorie Dannenfelser</td><td>SBA</td><td>2014, 2015, 2016, 2017, 2018, 2019, 2020</td></tr>
+<tr><td>Warren Davidson</td><td>US Congressman</td><td>2018, 2020, 2026</td></tr>
+<tr><td>Mark Davis</td><td>World Bank</td><td>2023</td></tr>
+<tr><td>Arielle del Turco</td><td>FRC</td><td>2023</td></tr>
+<tr><td>Brian Dellinger</td><td>GCC</td><td>2025</td></tr>
+<tr><td>Jake Denton</td><td>Heritage</td><td>2025</td></tr>
+<tr><td>JC Derrick</td><td>World</td><td>2016, 2017</td></tr>
+<tr><td>Jan Dudt</td><td>GCC</td><td>2019</td></tr>
+<tr><td>Nathan and Madonna Estruth</td><td>MHA parents</td><td>2018</td></tr>
+<tr><td>Michael Farris</td><td>Patrick Henry College</td><td>2016</td></tr>
+<tr><td>Kellie Fiedorek</td><td>Alliance Defending Freedom</td><td>2015</td></tr>
+<tr><td>Dave and Laura Fisher</td><td>Marmalade Lily</td><td>2021</td></tr>
+<tr><td>Douglas Frank</td><td>Schilling School</td><td>2021</td></tr>
+<tr><td>Jennifer Galardi</td><td>Heritage</td><td>2026</td></tr>
+<tr><td>Maggie Gallagher</td><td>Institute for Marriage and Public Policy</td><td>2015</td></tr>
+<tr><td>Tim Goeglein</td><td>Focus on the Family</td><td>2022</td></tr>
+<tr><td>Devorah Goldman</td><td>EPPC</td><td>2026</td></tr>
+<tr><td>David Gordon</td><td>GCC</td><td>2017</td></tr>
+<tr><td>Katharine Gorka</td><td>Heritage</td><td>2022</td></tr>
+<tr><td>Allen Greene</td><td>Answers in Genesis</td><td>2021</td></tr>
+<tr><td>Mark David Hall</td><td>George Fox University</td><td>2022</td></tr>
+<tr><td>Ken Ham</td><td>Answers in Genesis</td><td>2021</td></tr>
+<tr><td>Seth Hamman</td><td>Cedarville</td><td>2025</td></tr>
+<tr><td>Brenda Hafera</td><td>Heritage</td><td>2024</td></tr>
+<tr><td>Mary Rice Hasson</td><td>EPPC</td><td>2020, 2022</td></tr>
+<tr><td>Jared Hayden</td><td>Colson Center</td><td>2024</td></tr>
+<tr><td>Charles Hedman</td><td>CHBC</td><td>2018</td></tr>
+<tr><td>Mary Holland</td><td>Children&#8217;s Health Defense</td><td>2026</td></tr>
+<tr><td>Jim Jordan</td><td>US Congressman</td><td>2014</td></tr>
+<tr><td>Sharon Kennedy</td><td>Ohio Supreme Court Justice</td><td>2021</td></tr>
+<tr><td>Carl Kerby, Jr.</td><td>Apolomedia</td><td>2021</td></tr>
+<tr><td>Brynne Krispin</td><td>FRC</td><td>2017</td></tr>
+<tr><td>Maryam Kubasek</td><td>Thrivepointe Counseling</td><td>2021</td></tr>
+<tr><td>Caleb Kuechly</td><td>MHA alumnus</td><td>2025</td></tr>
+<tr><td>Greg Landsman</td><td>US Congressman</td><td>2026</td></tr>
+<tr><td>Mike Lee</td><td>US Senator</td><td>2016</td></tr>
+<tr><td>Jonathan Leeman</td><td>Nine Marks</td><td>2022</td></tr>
+<tr><td>Matt Lewis</td><td>Daily Caller</td><td>2017</td></tr>
+<tr><td>Bobby and Sheila Little</td><td>Christian Embassy (Cru)</td><td>2018</td></tr>
+<tr><td>Jordan Lorence</td><td>Alliance Defending Freedom</td><td>2020</td></tr>
+<tr><td>Terry Mattingly</td><td>The King&#8217;s College</td><td>2017</td></tr>
+<tr><td>Katie McCoy</td><td>Texas Baptists</td><td>2024</td></tr>
+<tr><td>Matthew Mehan</td><td>Hillsdale</td><td>2019</td></tr>
+<tr><td>Matt Merker</td><td>CHBC</td><td>2019</td></tr>
+<tr><td>David Menton</td><td>Answers in Genesis</td><td>2021</td></tr>
+<tr><td>Arthur Milikh</td><td>Heritage/Claremont Institute</td><td>2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023</td></tr>
+<tr><td>Brian Minick</td><td>Fifth Third Bank</td><td>2025</td></tr>
+<tr><td>Clare Morell</td><td>EPPC</td><td>2025</td></tr>
+<tr><td>Paul Moreno</td><td>Hillsdale</td><td>2014</td></tr>
+<tr><td>Michael New</td><td>SBA</td><td>2022</td></tr>
+<tr><td>Eric Patterson</td><td>Victims of Communism Memorial Foundation</td><td>2023</td></tr>
+<tr><td>Jennifer Marshall Patterson</td><td>Heritage</td><td>2015</td></tr>
+<tr><td>Arlene Pellicane</td><td>Counselor and Author</td><td>2025</td></tr>
+<tr><td>Mike Pence</td><td>Former VP of the US</td><td>2023</td></tr>
+<tr><td>David Pickup</td><td>Therapist</td><td>2015</td></tr>
+<tr><td>Marius Pienaar</td><td>MHA parent</td><td>2023</td></tr>
+<tr><td>Harvest Prude</td><td>World</td><td>2021</td></tr>
+<tr><td>Deepak Reju</td><td>CHBC</td><td>2020</td></tr>
+<tr><td>Lora Ries</td><td>Heritage</td><td>2023</td></tr>
+<tr><td>Aaron Rothstein</td><td>EPPC</td><td>2026</td></tr>
+<tr><td>Cathy Ruse</td><td>FRC</td><td>2018</td></tr>
+<tr><td>Daniel and Rachel Sachs</td><td>The Marriage School</td><td>2024</td></tr>
+<tr><td>Joel Salatin</td><td>Polyface Farm</td><td>2026</td></tr>
+<tr><td>Hayley Satrom</td><td>Heartsong Counseling</td><td>2026</td></tr>
+<tr><td>Chris Scalia</td><td>American Enterprise Institute</td><td>2019</td></tr>
+<tr><td>Nina Schaefer</td><td>Heritage</td><td>2026</td></tr>
+<tr><td>Connor Semelsberger</td><td>FRC</td><td>2022, 2023</td></tr>
+<tr><td>Nathanael Smith</td><td>Cedarville</td><td>2026</td></tr>
+<tr><td>Matthew Spaulding</td><td>Hillsdale</td><td>2014, 2016</td></tr>
+<tr><td>Peter Sprigg</td><td>FRC</td><td>2015, 2019</td></tr>
+<tr><td>Delano Squires</td><td>Heritage</td><td>2024, 2025</td></tr>
+<tr><td>Jill Stanek</td><td>SBA</td><td>2018</td></tr>
+<tr><td>Jerry Sullivan</td><td>US State Department</td><td>2023</td></tr>
+<tr><td>Carl Trueman</td><td>GCC</td><td>2023</td></tr>
+<tr><td>Leslee Unruh</td><td>Alpha Center</td><td>2014, 2015</td></tr>
+<tr><td>Caleb Verbois</td><td>GCC</td><td>2016</td></tr>
+<tr><td>Andrew Walker</td><td>Southern Baptist Theological Seminary</td><td>2021</td></tr>
+<tr><td>Travis Weber</td><td>FRC</td><td>2016</td></tr>
+<tr><td>Brad Wenstrup</td><td>US Congressman</td><td>2014, 2022</td></tr>
+<tr><td>Bill Wichterman</td><td>Covington &amp; Burling</td><td>2018</td></tr>
+<tr><td>Genevieve Wood</td><td>Heritage</td><td>2017</td></tr>
+<tr><td>John York</td><td>Heritage</td><td>2019</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== LOCATIONS ========== -->
+<div id="page-locations" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">Where We Go</div>
+      <h2 class="section-title">Washington, D.C.</h2>
+      <div class="divider"></div>
+      <p class="section-body">The Worldview Summit takes place entirely in our nation's capital. Every venue is chosen because it embodies the Summit's themes of allegiance, faith, government, and American identity.</p>
+    </div>
+  </section>
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="locations-grid">
+        <div class="location-card"><span class="location-icon">📖</span><div class="location-name">Museum of the Bible</div><div class="location-address">400 4th St SW, Washington, D.C.</div><p class="location-desc">The Summit's Day One home. Students hear speaker sessions and tour the museum's exhibits on how Scripture has shaped Western civilization, law, and the American founding.</p></div>
+        <div class="location-card"><span class="location-icon">⛪</span><div class="location-name">Capitol Hill Baptist Church</div><div class="location-address">Capitol Hill, Washington, D.C.</div><p class="location-desc">Day Two's venue, directly engaging the question of faith's role in American public life — meeting inside a historic congregation just steps from the Capitol.</p></div>
+        <div class="location-card"><span class="location-icon">🏛️</span><div class="location-name">Heritage Foundation</div><div class="location-address">214 Massachusetts Ave NE, Washington, D.C.</div><p class="location-desc">Day Three's venue. One of the nation's leading conservative policy institutions hosts sessions on government, liberty, and immigration policy, plus lunch on-site.</p></div>
+        <div class="location-card"><span class="location-icon">🍽️</span><div class="location-name">Capitol Hill Club</div><div class="location-address">300 First St SE, Washington, D.C.</div><p class="location-desc">Site of the Summit's formal Thursday dinner — a formation moment in itself, where students practice hospitality and conversation in a prestigious civic setting.</p></div>
+        <div class="location-card"><span class="location-icon">🦅</span><div class="location-name">National Mall Monuments</div><div class="location-address">The Mall, Washington, D.C.</div><p class="location-desc">Monday evening's opening activity — the Washington, Lincoln, WWII, Vietnam, and Korean War Memorials. A civic catechism in stone that frames the whole week.</p></div>
+        <div class="location-card"><span class="location-icon">🚉</span><div class="location-name">Union Station</div><div class="location-address">50 Massachusetts Ave NE, Washington, D.C.</div><p class="location-desc">Wednesday's lunch stop — a historic transportation hub turned dining and shopping destination near Capitol Hill.</p></div>
+        <div class="location-card"><span class="location-icon">🏨</span><div class="location-name">Capitol Hill Hotel</div><div class="location-address">Capitol Hill, Washington, D.C.</div><p class="location-desc">Home base for the week. Students check in Monday evening and stay through Friday morning checkout, walking to most venues from here.</p></div>
+        <div class="location-card"><span class="location-icon">🕊️</span><div class="location-name">March for Life</div><div class="location-address">National Mall, Washington, D.C.</div><p class="location-desc">Friday's capstone activity. Students participate publicly in the March for Life — putting the week's formation into concrete, embodied civic action.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== STUDENT GUIDE ========== -->
+<div id="page-guide" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">Student Trip Guide</div>
+      <h2 class="section-title">Everything you need<br>for the trip</h2>
+      <div class="divider"></div>
+      <p class="section-body">Packing lists, money matters, merchandise, etiquette, and everything else you need to know before we load the bus on January 18th.</p>
+      <div class="quickfacts-grid">
+        <div class="quickfact"><div class="quickfact-label">Dates</div><div class="quickfact-value">Jan 18–22, 2027</div></div>
+        <div class="quickfact"><div class="quickfact-label">Report Time</div><div class="quickfact-value">6:45 AM at MHA</div></div>
+        <div class="quickfact"><div class="quickfact-label">Return</div><div class="quickfact-value">~Midnight, Friday</div></div>
+        <div class="quickfact"><div class="quickfact-label">Hotel</div><div class="quickfact-value">Capitol Hill Hotel</div></div>
+        <div class="quickfact"><div class="quickfact-label">Weather</div><div class="quickfact-value">Cold — Highs 30s–40s°F</div></div>
+      </div>
+      <div class="guide-nav">
+        <a onclick="scrollToGuide('guide-packing')">Packing List</a>
+        <a onclick="scrollToGuide('guide-money')">Money &amp; Meals</a>
+        <a onclick="scrollToGuide('guide-merch')">Merchandise</a>
+        <a onclick="scrollToGuide('guide-etiquette')">Etiquette &amp; Expectations</a>
+        <a onclick="scrollToGuide('guide-safety')">Health &amp; Safety</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKING LIST -->
+  <section class="section section-light" id="guide-packing">
+    <div class="section-inner">
+      <div class="section-label">Packing List</div>
+      <h2 class="section-title">What to bring</h2>
+      <div class="divider"></div>
+      <p class="section-body">Washington, D.C. in January is cold — average highs in the 30s–40s°F, with wind on the Mall. Layers are essential. Students will do a lot of walking, so comfortable, broken-in shoes matter more than anything else on this list.</p>
+
+      <div class="packing-grid">
+        <div class="packing-card">
+          <h4>🧥 Cold-Weather Clothing</h4>
+          <ul class="checklist">
+            <li>Warm winter coat</li>
+            <li>Hat, gloves, and scarf</li>
+            <li>Layers — sweaters, thermal shirts</li>
+            <li>Comfortable, broken-in walking shoes</li>
+            <li>Warm socks (bring extra pairs)</li>
+            <li>Casual clothes for touring days</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h4>👔 Formal Attire</h4>
+          <ul class="checklist">
+            <li>One dressy outfit for the Capitol Hill Club dinner (Thursday) — collared shirt, tie, and dress pants/sport coat for young men; a dress or skirt/blouse for young women</li>
+            <li>Dress shoes to match</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h4>📄 Documents &amp; Money</h4>
+          <ul class="checklist">
+            <li>Government-issued photo ID</li>
+            <li>Copy of insurance card</li>
+            <li>Spending money for self-pay meals (see Money &amp; Meals below)</li>
+            <li>A card or small amount of cash for souvenirs</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h4>🧴 Toiletries &amp; Health</h4>
+          <ul class="checklist">
+            <li>Toothbrush, toothpaste, deodorant</li>
+            <li>Any personal medications (labeled, in original packaging)</li>
+            <li>Hand sanitizer &amp; lip balm (D.C. winters are dry)</li>
+            <li>Basic first-aid items (band-aids, pain reliever)</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h4>🔌 Electronics</h4>
+          <ul class="checklist">
+            <li>Phone &amp; charger</li>
+            <li>Portable battery pack (lots of photos and walking = fast battery drain)</li>
+            <li>Camera, if desired</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h4>📓 Summit Essentials</h4>
+          <ul class="checklist">
+            <li>Bible</li>
+            <li>Notebook or journal for session notes</li>
+            <li>Pen/pencil</li>
+            <li>A backpack or day bag for walking days</li>
+            <li>Reusable water bottle</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="not-bring-box">
+        <h4>Please Do Not Bring</h4>
+        <p>Large amounts of cash, valuable jewelry, video game consoles, or anything irreplaceable. Students are responsible for their own belongings throughout the trip. Vaping, tobacco, and alcohol products are strictly prohibited per MHA policy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MONEY & MEALS -->
+  <section class="section section-cream" id="guide-money">
+    <div class="section-inner">
+      <div class="section-label">Money &amp; Meals</div>
+      <h2 class="section-title">What's covered, what's not</h2>
+      <div class="divider"></div>
+      <p class="section-body">Most meals are included in the trip fee. A few meals are marked "$" on the schedule — these are self-pay, giving students a chance to explore D.C.'s food scene on their own budget.</p>
+
+      <table class="money-table">
+        <tr><th>Meal</th><th>Day</th><th>Status</th></tr>
+        <tr><td>Lunch on the Road</td><td>Monday</td><td class="self">Self-Pay ($)</td></tr>
+        <tr><td>Dinner — Monday</td><td>Monday</td><td class="paid">Included</td></tr>
+        <tr><td>Breakfast — Capitol Hill Hotel</td><td>Tue–Fri</td><td class="paid">Included</td></tr>
+        <tr><td>Lunch &amp; Dinner</td><td>Tuesday</td><td class="paid">Included</td></tr>
+        <tr><td>Lunch — Union Station</td><td>Wednesday</td><td class="self">Self-Pay ($)</td></tr>
+        <tr><td>Dinner — Wednesday</td><td>Wednesday</td><td class="paid">Included</td></tr>
+        <tr><td>Lunch — Heritage Foundation</td><td>Thursday</td><td class="paid">Included</td></tr>
+        <tr><td>Dinner — Capitol Hill Club</td><td>Thursday</td><td class="paid">Included</td></tr>
+        <tr><td>Lunch on the Road</td><td>Friday</td><td class="self">Self-Pay ($)</td></tr>
+        <tr><td>Dinner on the Road</td><td>Friday</td><td class="self">Self-Pay ($)</td></tr>
+      </table>
+
+      <div class="highlight-box" style="margin-top:40px;">
+        <h3>Suggested Spending Money</h3>
+        <p>Plan for roughly $60–$100 to cover the three self-pay meals plus any souvenirs or snacks at Union Station or the museum gift shops. Most D.C. vendors accept cards, but a little cash is handy for tips and smaller purchases.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCHANDISE -->
+  <section class="section section-light" id="guide-merch">
+    <div class="section-inner">
+      <div class="section-label">Trip Merchandise</div>
+      <h2 class="section-title">Show your Summit spirit</h2>
+      <div class="divider"></div>
+      <p class="section-body">Commemorative 2027 Worldview Summit apparel and gear will be available for order before the trip.</p>
+      <div class="merch-card">
+        <h4>2027 Summit Store — Coming Soon</h4>
+        <p>The Student Leadership Team is finalizing this year's merchandise design, pricing, and sizing. Preview what's planned in the full Summit Store, or reach out to be notified when ordering opens.</p>
+        <a href="#" onclick="showPage('store');return false;" class="btn-primary" style="margin-right:12px;">Preview the Store →</a>
+        <a href="mailto:info@marshill.edu?subject=2027%20Worldview%20Summit%20Merchandise" class="btn-ghost">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETIQUETTE -->
+  <section class="section section-cream" id="guide-etiquette">
+    <div class="section-inner">
+      <div class="section-label">Etiquette &amp; Expectations</div>
+      <h2 class="section-title">How we carry ourselves</h2>
+      <div class="divider"></div>
+      <p class="section-body">The Worldview Summit is a formation trip, not a vacation. Students represent Mars Hill Academy in some of the nation's most prestigious institutions — how we dress, speak, and behave matters.</p>
+      <div class="etiquette-grid">
+        <div class="value-card"><h3>Formal Dinner Dress Code</h3><p>The Thursday dinner at the Capitol Hill Club requires business/formal attire — collared shirt and tie or sport coat for young men, a dress or skirt/blouse for young women. This is a practiced skill in hospitality and presence.</p></div>
+        <div class="value-card"><h3>Curfew &amp; Rest</h3><p>Devotions and rest begin at 10:30 PM each night; students are in their own rooms by midnight. Rest is part of the Summit's intentional rhythm — full engagement requires real sleep.</p></div>
+        <div class="value-card"><h3>Buddy System</h3><p>Students move in groups at all times in D.C., especially during free/touring blocks. Know your chaperone and your group before every activity.</p></div>
+        <div class="value-card"><h3>March for Life Conduct</h3><p>Friday's March for Life draws large crowds. Students stay with their group, follow chaperone instructions closely, and represent MHA with maturity and respect.</p></div>
+        <div class="value-card"><h3>Session Engagement</h3><p>Phones away during sessions. Bring a notebook — most students find their best Summit memories come from the notes and questions they wrote down in the room.</p></div>
+        <div class="value-card"><h3>Respectful Dialogue</h3><p>Speakers may express views students disagree with. The Summit's purpose is to wrestle honestly with hard questions — model gracious, thoughtful engagement, not dismissiveness.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="section section-light" id="guide-safety">
+    <div class="section-inner">
+      <div class="section-label">Health &amp; Safety</div>
+      <h2 class="section-title">Before you go</h2>
+      <div class="divider"></div>
+      <div class="two-col" style="margin-top:30px;">
+        <div class="value-card">
+          <h3>Medications</h3>
+          <p>All medications must be reported to a chaperone in advance and carried in original, labeled packaging. Please contact the school office with any medical needs before departure.</p>
+        </div>
+        <div class="value-card">
+          <h3>Emergency Contact</h3>
+          <p>Parents will receive a trip emergency contact sheet with chaperone cell numbers before departure. The MHA office — (513) 770-3223 — can also relay urgent messages during the trip.</p>
+        </div>
+      </div>
+      <div class="highlight-box" style="margin-top:20px;">
+        <h3>Questions Before the Trip?</h3>
+        <p>Contact Mr. Andy Stapleton or the MHA main office with any packing, health, or logistics questions well before January 18th. Don't wait until the week of the trip!</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== STORE ========== -->
+<div id="page-store" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">2027 Summit Store</div>
+      <h2 class="section-title">Gear up for<br>"One Nation Under God"</h2>
+      <div class="divider"></div>
+      <p class="section-body">Commemorative apparel and gear for the 2027 Worldview Summit. Ordering isn't open yet — browse what's planned below, and check back as the Student Leadership Team finalizes designs, pricing, and sizing.</p>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="store-filters">
+        <button class="store-filter-btn active" onclick="filterStore('all', this)">All</button>
+        <button class="store-filter-btn" onclick="filterStore('apparel', this)">Apparel</button>
+        <button class="store-filter-btn" onclick="filterStore('headwear', this)">Headwear</button>
+        <button class="store-filter-btn" onclick="filterStore('drinkware', this)">Drinkware</button>
+        <button class="store-filter-btn" onclick="filterStore('accessories', this)">Accessories</button>
+      </div>
+
+      <div class="store-grid">
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">👕<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">2027 Summit T-Shirt</div>
+            <div class="product-category">Apparel</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">🧥<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">2027 Summit Hoodie</div>
+            <div class="product-category">Apparel</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">🧣<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Quarter-Zip Pullover</div>
+            <div class="product-category">Apparel</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">👔<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Long Sleeve Tee</div>
+            <div class="product-category">Apparel</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="apparel">
+          <div class="product-image">👕<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Crewneck Sweatshirt</div>
+            <div class="product-category">Apparel</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="headwear">
+          <div class="product-image">🧢<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Embroidered Baseball Cap</div>
+            <div class="product-category">Headwear</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="headwear">
+          <div class="product-image">🎩<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Knit Beanie</div>
+            <div class="product-category">Headwear</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="drinkware">
+          <div class="product-image">🥤<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Insulated Travel Tumbler</div>
+            <div class="product-category">Drinkware</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="drinkware">
+          <div class="product-image">💧<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Stainless Water Bottle</div>
+            <div class="product-category">Drinkware</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <div class="product-image">👜<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Canvas Tote Bag</div>
+            <div class="product-category">Accessories</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <div class="product-image">✨<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Sticker Pack</div>
+            <div class="product-category">Accessories</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+          <div class="product-image">🎒<span class="coming-soon-ribbon">Coming Soon</span></div>
+          <div class="product-info">
+            <div class="product-name">Drawstring Backpack</div>
+            <div class="product-category">Accessories</div>
+            <div class="product-price">Price TBA</div>
+            <button class="product-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== FAQ ========== -->
+<div id="page-faq" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything you need<br>to know</h2>
+      <div class="divider"></div>
+      <p class="section-body">Common questions from parents and students about the Summit's structure, length, cost, speakers, and purpose.</p>
+    </div>
+  </section>
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What is the 2027 Summit topic? <span class="faq-icon">+</span></div><div class="faq-a">"One Nation Under God: Allegiance, Assimilation, and the Meaning of America." As America marks the conclusion of its 250th birthday, the Summit explores American identity, the role of faith in public life, the proper limits of government, and immigration policy — from a distinctly Christian worldview.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Who can attend the Worldview Summit? <span class="faq-icon">+</span></div><div class="faq-a">The Worldview Summit is open to all Mars Hill Academy students in grades 9–12 (the Rhetoric School). It is one of the annual highlights of high school life at MHA.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What are the exact trip dates? <span class="faq-icon">+</span></div><div class="faq-a">The 2027 Worldview Summit runs Monday, January 18 through Friday, January 22, 2027 — a five-day trip including travel. Students report to MHA at 6:45 AM Monday and return to campus around midnight Friday.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Where does the Summit take place? <span class="faq-icon">+</span></div><div class="faq-a">The entire 2027 Summit takes place in Washington, D.C. Students stay at the Capitol Hill Hotel and visit the Museum of the Bible, Capitol Hill Baptist Church, the Heritage Foundation, the Capitol Hill Club, Union Station, and the National Mall — concluding with the March for Life on Friday.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Who plans and runs the Summit? <span class="faq-icon">+</span></div><div class="faq-a">Students plan and run it. Under the mentorship of faculty advisor Mr. Andy Stapleton, the Student Leadership Team selects the annual theme, recruits speakers, coordinates logistics, leads worship, and facilitates every session.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Who are the 2027 speakers? <span class="faq-icon">+</span></div><div class="faq-a">The speaker roster is still being finalized by the Student Leadership Team. Speakers are being recruited from Congress, public policy institutions, academia, and advocacy organizations. Visit the Speakers page for updates as they're confirmed, and see our Summit history for the caliber of past speakers.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is there a cost to attend? <span class="faq-icon">+</span></div><div class="faq-a">There is a cost covering transportation, hotel, most meals, and event fees. A few meals are self-pay (marked "$" on the schedule). Specific pricing will be communicated by the school. Please contact the MHA office for details: (513) 770-3223 or info@marshill.edu.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What should students pack? <span class="faq-icon">+</span></div><div class="faq-a">See the Student Guide page for a full packing list. In short: warm winter layers, comfortable walking shoes, one formal outfit for the Capitol Hill Club dinner, and spending money for self-pay meals.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Where can I buy Summit merchandise? <span class="faq-icon">+</span></div><div class="faq-a">2027 Summit merchandise ordering will open closer to the trip. See the Student Guide page for updates, or email info@marshill.edu to ask about availability.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How is this different from a regular school trip? <span class="faq-icon">+</span></div><div class="faq-a">The Worldview Summit is not a sightseeing trip — it is a formation event. Students engage speakers from Congress, policy institutions, and academia on the most pressing cultural questions of our time, from a distinctly Christian vantage point.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How do I contact the school? <span class="faq-icon">+</span></div><div class="faq-a">Mars Hill Academy's main office: (513) 770-3223 | info@marshill.edu | 4230 Aero Drive, Mason, Ohio 45040. Office hours: Monday–Friday, 8:00 a.m. – 3:30 p.m.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== CONTACT ========== -->
+<div id="page-contact" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <section class="section section-dark" style="padding-bottom:48px;">
+    <div class="section-inner">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">We'd love to<br>hear from you</h2>
+      <div class="divider"></div>
+      <p class="section-body">Whether you're a parent with questions, a prospective speaker, or someone wanting to learn more about Mars Hill Academy, we welcome your message.</p>
+    </div>
+  </section>
+  <section class="section section-cream">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-block"><div class="contact-info-label">Address</div><div class="contact-info-value">4230 Aero Drive<br>Mason, Ohio 45040</div></div>
+          <div class="contact-info-block"><div class="contact-info-label">Phone</div><div class="contact-info-value">(513) 770-3223</div></div>
+          <div class="contact-info-block"><div class="contact-info-label">Fax</div><div class="contact-info-value">(513) 548-0080</div></div>
+          <div class="contact-info-block"><div class="contact-info-label">Email</div><div class="contact-info-value">info@marshill.edu</div></div>
+          <div class="contact-info-block"><div class="contact-info-label">Office Hours</div><div class="contact-info-value">Monday – Friday<br>8:00 a.m. – 3:30 p.m.</div></div>
+          <div class="contact-info-block"><div class="contact-info-label">Summit Faculty Advisor</div><div class="contact-info-value">Mr. Andy Stapleton<br><span style="font-family:'Josefin Sans',sans-serif;font-size:13px;color:var(--muted);">Bible, Humanities &amp; Greek</span></div></div>
+          <div class="about-quote" style="margin-top:32px;">"It's great for the students to hear such clear biblical worldview spoken to them by people other than their parents and teachers."<br><span style="font-size:0.5em;font-style:normal;font-family:'Josefin Sans',sans-serif;letter-spacing:0.16em;color:var(--gold);">— Headmaster Mike McKenna, 2021 Worldview Summit reflection</span></div>
+        </div>
+        <div>
+          <div style="background:var(--warm-white);border:1px solid var(--border);padding:40px;">
+            <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:6px;">Send a Message</h3>
+            <p style="font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;">We'll respond within one business day</p>
+            <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" placeholder="Your name"></div>
+            <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+            <div class="form-group"><label class="form-label">I am a…</label><select class="form-select"><option value="">Select one</option><option>Current MHA Parent</option><option>Current MHA Student</option><option>Prospective Speaker</option><option>Prospective Family</option><option>Alumni</option><option>Other</option></select></div>
+            <div class="form-group"><label class="form-label">My Question or Message</label><textarea class="form-textarea" placeholder="Ask us anything about the Worldview Summit or Mars Hill Academy…"></textarea></div>
+            <button class="btn-primary" style="width:100%;text-align:center;" onclick="handleSubmit()">Send Message</button>
+            <div id="form-success" style="display:none;margin-top:16px;padding:14px;background:rgba(200,151,58,0.1);border:1px solid var(--gold);font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);">✓ &nbsp; Message received. We'll be in touch soon.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== DONATE ========== -->
+<div id="page-donate" class="page">
+  <div style="height:68px;background:var(--deep);"></div>
+  <div class="donate-hero">
+    <div style="position:relative;z-index:2;">
+      <div class="section-label" style="text-align:center;">Support the Mission</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,64px);font-weight:900;color:#fff;line-height:1;margin-bottom:20px;">Your gift transforms<br><em style="color:var(--gold);font-style:italic;">hearts and minds</em></h2>
+      <div class="divider" style="margin:24px auto 30px;"></div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 36px;line-height:1.7;">Mars Hill Academy is an independent school — free from government and denominational funding. Every gift directly supports classical Christian education and experiences like the Worldview Summit.</p>
+      <a href="https://marshill.edu/support/ways-to-give.html" target="_blank" class="btn-primary" style="font-size:12px;padding:18px 44px;">Give Now at marshill.edu →</a>
+    </div>
+  </div>
+
+  <section class="section section-light">
+    <div class="section-inner">
+      <div class="section-label" style="text-align:center;">Ways to Give</div>
+      <h2 class="section-title" style="text-align:center;">Choose how you'd like<br>to make an impact</h2>
+      <div class="divider" style="margin:24px auto 14px;"></div>
+      <p style="text-align:center;font-size:18px;color:var(--slate);font-weight:300;margin-bottom:0;">All giving is processed securely through Mars Hill Academy's official giving page.</p>
+      <div class="donate-tiers">
+        <div class="donate-tier">
+          <div class="tier-amount">AVF</div>
+          <div class="tier-name">Annual Vision Fund</div>
+          <p class="tier-desc">The lifeblood of MHA's annual operations. Your gift to the AVF supplements tuition and keeps Mars Hill's classical Christian education accessible for all families. Fully tax-deductible, accepted year-round.</p>
+          <a href="https://marshill.edu/support/annual-vision-fund.html" target="_blank" class="tier-btn">Give to the AVF →</a>
+        </div>
+        <div class="donate-tier featured">
+          <div class="tier-badge">Capital Campaign</div>
+          <div class="tier-amount">Room<br><span style="font-size:0.45em;">to Grow</span></div>
+          <div class="tier-name">Capital Campaign</div>
+          <p class="tier-desc">Support MHA's <em>Room to Grow, Space to Thrive</em> capital campaign — investing in the campus facilities that will serve Highlanders for generations to come.</p>
+          <a href="https://marshill.edu/support/capital-campaign/make-a-gift.html" target="_blank" class="tier-btn">Support the Campaign →</a>
+        </div>
+        <div class="donate-tier">
+          <div class="tier-amount">SGO</div>
+          <div class="tier-name">Scholarship Fund</div>
+          <p class="tier-desc">The Mars Hill SGO lets Ohio taxpayers redirect a portion of their state taxes to fund scholarships for MHA families — a powerful way to give at no net cost to you.</p>
+          <a href="https://marshill.edu/marshillsgo" target="_blank" class="tier-btn">Learn About SGO →</a>
+        </div>
+      </div>
+      <div class="highlight-box" style="margin-top:56px;text-align:center;">
+        <h3>Ready to give?</h3>
+        <p style="margin-bottom:28px;">Visit Mars Hill Academy's official giving page for all donation options — including online giving, checks, IRA charitable rollover gifts (for donors 70½ and older), matching gifts, and in-kind donations to the annual fundraising auction.</p>
+        <a href="https://marshill.edu/support/ways-to-give.html" target="_blank" class="btn-primary">Visit Ways to Give at marshill.edu →</a>
+      </div>
+      <div style="margin-top:56px;max-width:640px;margin-left:auto;margin-right:auto;text-align:center;">
+        <div class="section-label" style="text-align:center;">Questions About Giving?</div>
+        <p style="font-size:17px;line-height:1.7;color:var(--slate);font-weight:300;margin-bottom:14px;">Contact the MHA Development Office for assistance with gifts, matching programs, and in-kind donations.</p>
+        <p style="font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);">info@marshill.edu</p>
+        <p style="font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:0.2em;color:var(--muted);margin-top:5px;">(513) 770-3223 — ask for the Development team</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Worldview Summit 2027</div>
+      <p class="footer-tagline">"Learn Truth. Love Beauty. Live Goodness."<br>— Mars Hill Academy</p>
+      <p style="font-size:14px;color:rgba(255,255,255,0.3);line-height:1.6;">Cincinnati's only PK–12 independent classical and Christian school. Accredited by ACCS. 13-acre campus in Mason, Ohio.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Navigate</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About</a></li>
+        <li><a onclick="showPage('schedule')">Schedule</a></li>
+        <li><a onclick="showPage('speakers')">Speakers</a></li>
+        <li><a onclick="showPage('locations')">Locations</a></li>
+        <li><a onclick="showPage('guide')">Student Guide</a></li>
+        <li><a onclick="showPage('store')">Store</a></li>
+        <li><a onclick="showPage('faq')">FAQ</a></li>
+        <li><a onclick="showPage('contact')">Contact</a></li>
+        <li><a onclick="showPage('donate')" style="color:var(--gold);">Donate</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Mars Hill Academy</div>
+      <ul class="footer-links">
+        <li><a href="https://marshill.edu" target="_blank">marshill.edu</a></li>
+        <li><a href="tel:5137703223">(513) 770-3223</a></li>
+        <li><a href="mailto:info@marshill.edu">info@marshill.edu</a></li>
+        <li><a href="https://marshill.edu/admissions/" target="_blank">Admissions</a></li>
+        <li><a href="https://marshill.edu/support/ways-to-give.html" target="_blank">Ways to Give</a></li>
+        <li><a href="https://marshill.edu/highlander-life/travel/" target="_blank">All Travel Programs</a></li>
+      </ul>
+      <div style="margin-top:26px;font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:rgba(255,255,255,0.3);">Accredited by ACCS<br>Independent · Classical · Christian</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2027 Mars Hill Academy · Worldview Summit</span>
+    <span style="color:var(--gold);">Learn Truth · Love Beauty · Live Goodness</span>
+  </div>
+</footer>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const el = document.getElementById('nav-' + id);
+    if (el) el.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function showDay(dayId, btn) {
+    document.querySelectorAll('.day-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(dayId).classList.add('active');
+    btn.classList.add('active');
+  }
+  function toggleFaq(item) {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+  function handleSubmit() {
+    const s = document.getElementById('form-success');
+    s.style.display = 'block';
+    setTimeout(() => s.style.display = 'none', 5000);
+  }
+  function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+  function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+  function filterStore(category, btn) {
+    document.querySelectorAll('.store-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+    });
+  }
+  function toggleDirectory() {
+    const dir = document.getElementById('full-directory');
+    const btn = document.getElementById('directory-toggle-btn');
+    const isHidden = dir.style.display === 'none';
+    dir.style.display = isHidden ? 'block' : 'none';
+    btn.textContent = isHidden ? 'Hide Full Directory ↑' : 'View the Complete 111-Speaker Directory ↓';
+    if (isHidden) { dir.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }
+  function scrollToGuide(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
