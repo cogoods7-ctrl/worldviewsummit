@@ -159,6 +159,7 @@
   .form-input, .form-select, .form-textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border); background: var(--warm-white); font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--navy); outline: none; transition: border-color 0.2s; }
   .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
   .form-textarea { height: 110px; resize: vertical; }
+  .contact-form-card { background: var(--warm-white); border: 1px solid var(--border); padding: 40px; }
 
   .donate-hero { background: var(--deep); padding: 120px 40px 80px; text-align: center; position: relative; overflow: hidden; }
   .donate-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; margin-top: 60px; }
@@ -227,14 +228,6 @@
   .product-category { font-family: 'Josefin Sans', sans-serif; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
   .product-price { font-family: 'Josefin Sans', sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
   .product-btn { width: 100%; padding: 11px; font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: #e6e6e6; color: #969696; border: none; cursor: not-allowed; text-align: center; }
-
-  @media (max-width: 768px) {
-    .section { padding: 70px 22px; }
-    .about-grid, .contact-grid, .two-col { grid-template-columns: 1fr; gap: 36px; }
-    .footer-inner { grid-template-columns: 1fr; gap: 36px; }
-    .stat-strip { gap: 22px; }
-    .hero-ornament { width: 280px; height: 280px; }
-  }
   footer { background: var(--deep); color: rgba(255,255,255,0.5); padding: 60px 40px 40px; border-top: 1px solid var(--border); }
   .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 40px; }
   .footer-brand { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 12px; }
@@ -245,6 +238,70 @@
   .footer-links a { font-size: 15px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; cursor: pointer; }
   .footer-links a:hover { color: var(--gold); }
   .footer-bottom { max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; }
+
+  /* ══════════════════════════════════════════════════════════════
+     RESPONSIVE — kept last so these rules always win the cascade
+     ══════════════════════════════════════════════════════════════ */
+
+  /* Tablet & small desktop */
+  @media (max-width: 900px) {
+    .quickfacts-grid, .packing-grid, .etiquette-grid { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+  }
+
+  /* Phones & narrow tablets */
+  @media (max-width: 768px) {
+    .section { padding: 64px 22px; }
+    .about-grid, .contact-grid, .two-col { grid-template-columns: 1fr; gap: 32px; }
+    .stat-strip { gap: 20px; padding: 18px 24px; }
+    .hero-ornament { width: 260px; height: 260px; }
+    .hero { padding-left: 12px; padding-right: 12px; }
+
+    nav { padding: 0 16px; }
+    .nav-logo { font-size: 10px; }
+    .nav-logo span { font-size: 8px; }
+
+    /* Footer: force single column, override the 3-col base rule declared earlier */
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    footer { padding: 48px 24px 28px; }
+    .footer-links { display: inline-block; text-align: left; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+
+    /* Speaker / location / product / donate grids: single column on phones */
+    .speakers-grid, .locations-grid, .store-grid, .donate-tiers, .packing-grid, .quickfacts-grid, .etiquette-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Schedule + store filter tabs: tighter, still wrap */
+    .schedule-tab { padding: 11px 14px; font-size: 9px; }
+    .store-filter-btn { padding: 9px 16px; font-size: 9px; }
+    .guide-nav a { padding: 9px 14px; font-size: 9px; }
+
+    /* Hero action buttons stack full-width for easy tapping */
+    .hero-actions { flex-direction: column; width: 100%; }
+    .hero-actions .btn-primary, .hero-actions .btn-ghost { width: 100%; text-align: center; padding: 15px 20px; }
+
+    /* Tables: shrink to fit narrow screens without horizontal scroll */
+    .money-table th, .money-table td { font-size: 13px; padding: 9px 8px; }
+    .money-table th { font-size: 8px; }
+
+    /* Contact / send-message form card padding */
+    .contact-form-card { padding: 26px; }
+  }
+
+  /* Small phones */
+  @media (max-width: 460px) {
+    .hero-eyebrow { font-size: 9px; letter-spacing: 0.28em; margin-bottom: 20px; }
+    .hero-title { font-size: 42px; }
+    .hero-topic { font-size: 15px; padding: 0 6px; }
+    .hero-date { font-size: 10px; letter-spacing: 0.14em; }
+    .section-title { font-size: 28px; }
+    .about-quote { font-size: 18px; padding-left: 18px; }
+    .value-card, .speaker-card, .location-card, .packing-card { padding: 24px; }
+    .highlight-box { padding: 28px; }
+    .schedule-tabs { justify-content: center; }
+    .timeline { padding-left: 30px; }
+    .timeline-item::before { left: -28px; }
+  }
 </style>
 </head>
 <body>
@@ -1092,7 +1149,7 @@
           <div class="about-quote" style="margin-top:32px;">"It's great for the students to hear such clear biblical worldview spoken to them by people other than their parents and teachers."<br><span style="font-size:0.5em;font-style:normal;font-family:'Josefin Sans',sans-serif;letter-spacing:0.16em;color:var(--gold);">— Headmaster Mike McKenna, 2021 Worldview Summit reflection</span></div>
         </div>
         <div>
-          <div style="background:var(--warm-white);border:1px solid var(--border);padding:40px;">
+          <div class="contact-form-card">
             <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:6px;">Send a Message</h3>
             <p style="font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;">We'll respond within one business day</p>
             <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" placeholder="Your name"></div>
