@@ -24,14 +24,14 @@ module.exports = async (req, res) => {
 
   try {
     const { salt, hash } = hashPassword(newPassword);
-    const success = await upsertSiteConfig(salt, hash);
-    if (!success) {
-      res.status(500).json({ error: 'Could not save the new password. Check Supabase connection.' });
+    const result = await upsertSiteConfig(salt, hash);
+    if (!result.ok) {
+      res.status(500).json({ error: `Could not save the new password. ${result.detail || ''}`.trim() });
       return;
     }
     res.status(200).json({ ok: true });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Server error saving password.' });
+    res.status(500).json({ error: `Server error saving password: ${err.message}` });
   }
 };
