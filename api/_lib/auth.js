@@ -141,19 +141,37 @@ async function getSiteConfig() {
 }
 
 async function upsertSiteConfig(salt, hash) {
-  const res = await supabaseFetch('site_config?id=eq.1', {
+  const patchRes = await supabaseFetch('site_config?id=eq.1', {
     method: 'PATCH',
     body: JSON.stringify({ password_salt: salt, password_hash: hash, updated_at: new Date().toISOString() }),
   });
-  if (res.status === 404 || (await res.clone().json().catch(() => [])).length === 0) {
-    // no row yet — insert the first one
-    const insertRes = await supabaseFetch('site_config', {
-      method: 'POST',
-      body: JSON.stringify({ id: 1, password_salt: salt, password_hash: hash, updated_at: new Date().toISOString() }),
-    });
-    return insertRes.ok;
+  const patchText = await patchRes.text();
+
+  if (!patchRes.ok) {
+    console.error('site_config PATCH failed:', patchRes.status, patchText);
+    return { ok: false, detail: `Supabase PATCH error (${patchRes.status}): ${patchText}` };
   }
-  return res.ok;
+
+  let patchRows = [];
+  try { patchRows = JSON.parse(patchText); } catch { /* not JSON, treat as empty */ }
+
+  if (Array.isArray(patchRows) && patchRows.length > 0) {
+    return { ok: true }; // an existing row was found and updated
+  }
+
+  // No row existed yet (first time setting a password) — insert it.
+  const insertRes = await supabaseFetch('site_config', {
+    method: 'POST',
+    body: JSON.stringify({ id: 1, password_salt: salt, password_hash: hash, updated_at: new Date().toISOString() }),
+  });
+  const insertText = await insertRes.text();
+
+  if (!insertRes.ok) {
+    console.error('site_config INSERT failed:', insertRes.status, insertText);
+    return { ok: false, detail: `Supabase INSERT error (${insertRes.status}): ${insertText}` };
+  }
+
+  return { ok: true };
 }
 
 async function logAccess(success, req) {
