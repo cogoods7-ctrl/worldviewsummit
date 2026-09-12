@@ -276,9 +276,8 @@ const PAGES = {
       <p class="section-body">Commemorative 2027 Worldview Summit apparel and gear will be available for order before the trip.</p>
       <div class="merch-card">
         <h4>2027 Summit Store — Coming Soon</h4>
-        <p>The Student Leadership Team is finalizing this year's merchandise design, pricing, and sizing. Preview what's planned in the full Summit Store, or reach out to be notified when ordering opens.</p>
-        <a href="#" onclick="showPage('store');return false;" class="btn-primary" style="margin-right:12px;">Preview the Store →</a>
-        <a href="mailto:info@marshill.edu?subject=2027%20Worldview%20Summit%20Merchandise" class="btn-ghost">Ask a Question</a>
+        <p>The Student Leadership Team is finalizing this year's merchandise design, pricing, and sizing.</p>
+        <a href="#" onclick="showPage('store');return false;" class="btn-primary">Preview the Store →</a>
       </div>
     </div>
   </section>
