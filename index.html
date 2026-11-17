@@ -141,14 +141,6 @@
   .location-address { font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
   .location-desc { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.6); font-weight: 300; }
 
-  .faq-list { max-width: 780px; margin: 60px auto 0; }
-  .faq-item { border-bottom: 1px solid var(--border); }
-  .faq-q { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 600; color: var(--navy); padding: 24px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; user-select: none; }
-  .faq-q:hover { color: var(--gold); }
-  .faq-icon { width: 26px; height: 26px; flex-shrink: 0; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); transition: transform 0.3s; }
-  .faq-item.open .faq-icon { transform: rotate(45deg); }
-  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; font-size: 17px; line-height: 1.7; color: var(--slate); font-weight: 300; }
-  .faq-item.open .faq-a { max-height: 500px; padding-bottom: 24px; }
 
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; margin-top: 60px; }
   .contact-info-block { margin-bottom: 30px; }
@@ -271,11 +263,11 @@
 
   /* ── TEXT WRAPPING: avoid a lone word on a final line ── */
   h1, h2, h3, h4, .hero-topic, .scripture-text, .about-quote, .quickfact-value { text-wrap: balance; }
-  p, li, .timeline-desc, .timeline-title, .speaker-bio, .location-desc, .tier-desc, .faq-a { text-wrap: pretty; }
+  p, li, .timeline-desc, .timeline-title, .speaker-bio, .location-desc, .tier-desc, .roster-topic { text-wrap: pretty; }
   .nw { white-space: nowrap; }
 
   /* ── HERO TITLE + HOME THEME TITLE ── */
-  .hero-topic { max-width: 900px; margin-left: auto; margin-right: auto; }
+  .hero-topic { max-width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 22px; }
   .hero-topic .ht-main { display: block; font-size: clamp(22px, 3vw, 34px); font-weight: 700; color: #fff; margin-bottom: 6px; }
   .hero-topic .ht-sub { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(17px, 2.2vw, 24px); font-weight: 400; font-style: italic; color: rgba(255,255,255,0.75); }
   .title-main { display: block; }
@@ -292,6 +284,15 @@
   .donate-tier.featured .tier-title { color: #fff; }
   .donate-tier .tier-desc { flex: 1 1 auto; margin-bottom: 28px; }
   .donate-tier .tier-btn { margin-top: auto; }
+
+  /* ── 2027 SPEAKER LINE-UP ── */
+  .roster { margin-top: 8px; border-top: 1px solid var(--border); }
+  .roster-row { display: grid; grid-template-columns: 1.2fr 2fr 1.1fr; gap: 24px; align-items: baseline; padding: 22px 6px; border-bottom: 1px solid var(--border); }
+  .roster-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+  .roster-topic { font-size: 17px; line-height: 1.55; color: var(--slate); font-weight: 300; }
+  .roster-when { font-family: 'Josefin Sans', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-align: right; }
+  .roster-tag { display: inline-block; margin-left: 10px; font-family: 'Josefin Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: #e4e4e4; color: var(--slate); padding: 3px 9px; vertical-align: middle; }
+  .roster-note { font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 14px 0 0; }
 
   /* ── CONTACT FORM STATUS ── */
   .form-status { margin-top: 16px; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 0.1em; line-height: 1.6; }
@@ -351,6 +352,8 @@
       grid-template-columns: 1fr;
     }
     .donate-tier { padding: 40px 26px 32px; }
+    .roster-row { grid-template-columns: 1fr; gap: 6px; padding: 20px 2px; }
+    .roster-when { text-align: left; }
     .footer-about { margin-left: auto; margin-right: auto; }
 
     /* Schedule + store filter tabs: tighter, still wrap */
@@ -398,7 +401,6 @@
     <li><a onclick="showPage('locations')" id="nav-locations">Locations</a></li>
     <li><a onclick="showPage('guide')" id="nav-guide">Student Guide</a></li>
     <li><a onclick="showPage('store')" id="nav-store">Store</a></li>
-    <li><a onclick="showPage('faq')" id="nav-faq">FAQ</a></li>
     <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
     <li><a onclick="showPage('donate')" id="nav-donate" style="color:var(--gold);">Donate</a></li>
   </ul>
@@ -414,7 +416,6 @@
   <a onclick="showPage('locations');closeMobileMenu()">Locations</a>
   <a onclick="showPage('guide');closeMobileMenu()">Student Guide</a>
   <a onclick="showPage('store');closeMobileMenu()">Store</a>
-  <a onclick="showPage('faq');closeMobileMenu()">FAQ</a>
   <a onclick="showPage('contact');closeMobileMenu()">Contact</a>
   <a onclick="showPage('donate');closeMobileMenu()">Donate</a>
   <a class="donate-mobile" onclick="window.open('https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=0da336ce-5f00-495c-ad60-24adefd7e46f&envid=p-TM6DrOJNnkCuhBDGBgRZmA&zone=usa','_blank');closeMobileMenu()">Give Now to the Summit →</a>
@@ -428,7 +429,6 @@
       <div class="hero-eyebrow">Mars Hill Academy · Rhetoric School · Grades 9–12 · 14th Annual Summit</div>
       <h1 class="hero-title">Worldview<em>Summit</em></h1>
       <p class="hero-topic"><span class="ht-main">One Nation Under God:</span><span class="ht-sub">Allegiance, Assimilation, and the Meaning of America</span></p>
-      <p class="hero-subtitle">Engaging culture with the mind of Christ</p>
       <p class="hero-date">January 18–22, 2027 &nbsp;·&nbsp; 5-Day Trip &nbsp;·&nbsp; Washington, D.C.</p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="showPage('about')">Discover the Summit</button>
@@ -551,12 +551,30 @@
       <div class="section-label">2027 Speaker Roster</div>
       <h2 class="section-title">Voices for<br>"One Nation Under God"</h2>
       <div class="divider"></div>
-      <p class="section-body">The Student Leadership Team is currently recruiting speakers from academia, public policy institutions, and advocacy organizations to address this year's theme. The 2027 roster will be announced here as speakers are confirmed. Prospective speakers are welcome to reach out via the Contact page.</p>
+      <p class="section-body">The Student Leadership Team is currently recruiting speakers from academia, public policy institutions, and advocacy organizations to address this year's theme. The line-up below is current as of the latest agenda and is subject to change. Prospective speakers are welcome to reach out via the Contact page.</p>
     </div>
   </section>
 
   <section class="section section-cream">
     <div class="section-inner">
+      <div class="section-label">2027 Line-Up</div>
+      <h2 class="section-title" style="margin-bottom:10px;">Speakers on the Agenda</h2>
+      <div class="divider"></div>
+      <div class="roster">
+        <div class="roster-row"><div class="roster-name">Marius Pienaar</div><div class="roster-topic">Immigration</div><div class="roster-when">Pre-Summit · Mon, Jan 11</div></div>
+        <div class="roster-row"><div class="roster-name">Glenn Duerr</div><div class="roster-topic">Patriotism and the Cross</div><div class="roster-when">Pre-Summit · Tue, Jan 12</div></div>
+        <div class="roster-row"><div class="roster-name">John Fry</div><div class="roster-topic">Launching Out: A Christian Perspective on the History of Immigration to America</div><div class="roster-when">Tue, Jan 19</div></div>
+        <div class="roster-row"><div class="roster-name">Luma Simms</div><div class="roster-topic">The Bond Between Creed and Covenant<br>Illegals, Refugees, and Human Dignity</div><div class="roster-when">Tue, Jan 19</div></div>
+        <div class="roster-row"><div class="roster-name">Paul Miller</div><div class="roster-topic">Christian Nationalism</div><div class="roster-when">Tue, Jan 19</div></div>
+        <div class="roster-row"><div class="roster-name">Andrew Spangenberg</div><div class="roster-topic">Are There Limits to Religious Liberty?</div><div class="roster-when">Tue, Jan 19</div></div>
+        <div class="roster-row"><div class="roster-name">Gary Smith<span class="roster-tag">To be confirmed</span></div><div class="roster-topic">Topic to be announced</div><div class="roster-when">Wed, Jan 20</div></div>
+        <div class="roster-row"><div class="roster-name">Richard Samuelson<span class="roster-tag">To be confirmed</span></div><div class="roster-topic">Topic to be announced</div><div class="roster-when">Wed, Jan 20</div></div>
+        <div class="roster-row"><div class="roster-name">Ron Simmons</div><div class="roster-topic">Topic to be announced</div><div class="roster-when">Thu, Jan 21</div></div>
+        <div class="roster-row"><div class="roster-name">Heritage Foundation speakers</div><div class="roster-topic">Speakers to be announced</div><div class="roster-when">Thu, Jan 21</div></div>
+        <div class="roster-row"><div class="roster-name">Abby Balmert (SBA)</div><div class="roster-topic">Fatal Mistake: How SCOTUS Betrayed Babies</div><div class="roster-when">Thu, Jan 21</div></div>
+      </div>
+      <p class="roster-note">Listed in order of appearance. The agenda is subject to change.</p>
+
       <div class="highlight-box">
         <h3>Interested in Speaking at the 2027 Summit?</h3>
         <p>We are actively recruiting speakers on national identity, faith and public life, government and liberty, and immigration policy for our January 18–22, 2027 Summit in Washington, D.C. If you or someone you know would be a strong fit, please reach out through the Contact page — we'd love to hear from you.</p>
@@ -737,12 +755,6 @@
   </section>
 </div>
 
-<!-- ========== FAQ ========== -->
-<div id="page-faq" class="page">
-  <div style="height:68px;background:var(--deep);"></div>
-  <div class="protected-loading" id="loading-faq"></div>
-</div>
-
 <div id="page-contact" class="page">
   <div style="height:68px;background:var(--deep);"></div>
   <section class="section section-dark" style="padding-bottom:48px;">
@@ -768,7 +780,7 @@
         <div>
           <div class="contact-form-card">
             <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:6px;">Send a Message</h3>
-            <p style="font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;">We'll respond within one business day</p>
+            <p style="font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;">We'll respond within three business days</p>
             <form id="contact-form" onsubmit="submitContactForm(event)">
               <input type="hidden" name="_subject" value="Worldview Summit website message">
               <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -864,7 +876,6 @@
         <li><a onclick="showPage('locations')">Locations</a></li>
         <li><a onclick="showPage('guide')">Student Guide</a></li>
         <li><a onclick="showPage('store')">Store</a></li>
-        <li><a onclick="showPage('faq')">FAQ</a></li>
         <li><a onclick="showPage('contact')">Contact</a></li>
         <li><a onclick="showPage('donate')" style="color:var(--gold);">Donate</a></li>
       </ul>
@@ -891,7 +902,7 @@
   </div>
 </footer>
 
-<!-- ========== PASSWORD GATE (Schedule / Locations / Guide / FAQ) ========== -->
+<!-- ========== PASSWORD GATE (Schedule / Locations / Guide) ========== -->
 <div class="gate-overlay" id="site-gate">
   <div class="gate-card">
     <button class="gate-close" onclick="closeSiteGate()">&times;</button>
@@ -921,7 +932,7 @@
     <div id="admin-panel-view" style="display:none;" class="admin-panel-body">
       <div class="admin-section" style="margin-top:0;border-top:none;padding-top:0;">
         <h4>Change Site Password</h4>
-        <p style="font-size:14px;color:var(--slate);font-weight:300;margin-bottom:12px;">This updates the shared password students, parents, and staff use to view the Schedule, Locations, Student Guide, and FAQ pages. Takes effect immediately — no redeploy needed.</p>
+        <p style="font-size:14px;color:var(--slate);font-weight:300;margin-bottom:12px;">This updates the shared password students, parents, and staff use to view the Schedule, Locations, and Student Guide pages. Takes effect immediately — no redeploy needed.</p>
         <input type="password" class="gate-input" id="admin-new-password" placeholder="New password (min. 6 characters)">
         <button class="btn-primary" style="width:100%;" onclick="saveNewPassword()">Save New Password</button>
         <div class="admin-status" id="admin-save-status"></div>
@@ -941,7 +952,7 @@
 </div>
 
 <script>
-  const PROTECTED_PAGES = ['schedule', 'locations', 'guide', 'faq'];
+  const PROTECTED_PAGES = ['schedule', 'locations', 'guide'];
   const loadedProtectedPages = {};
   let pendingPage = null;
 
@@ -1107,11 +1118,6 @@
     document.getElementById(dayId).classList.add('active');
     btn.classList.add('active');
   }
-  function toggleFaq(item) {
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  }
   async function submitContactForm(e) {
     e.preventDefault();
     const form = e.target;
@@ -1149,7 +1155,7 @@
   // Glue the last two words of each text block together so no line ends with one lone word.
   function fixWidows(root) {
     const scope = root || document;
-    const sel = 'p, li, h1, h2, h3, h4, .timeline-title, .timeline-desc, .speaker-bio, .location-desc, .tier-desc, .faq-a, .faq-q, .scripture-text, .about-quote, .contact-info-value, .quickfact-value';
+    const sel = 'p, li, h1, h2, h3, h4, .timeline-title, .timeline-desc, .speaker-bio, .location-desc, .tier-desc, .roster-topic, .roster-name, .scripture-text, .about-quote, .contact-info-value, .quickfact-value';
     scope.querySelectorAll(sel).forEach(el => {
       if (el.dataset.wf) return;
       if (el.parentElement && el.parentElement.closest('[data-wf]')) return;
